@@ -44,7 +44,6 @@ jobs:
             npm run build &&
             pm2 restart front
           "
-
     # # Step 4: Deploy front
     # - name: Deploy front
     #   run: |
