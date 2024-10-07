@@ -1,0 +1,77 @@
+name: Deploy Prod
+
+on:
+  push:
+    branches:
+      - main # Specify which branch triggers the deployment, change it as per your needs.
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up SSH Agent
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.DO_SSH_PRIVATE_KEY }}
+
+      # Step 3: Install Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+
+      # Step 4: Pull GH repo to a droplet
+      - name: Pull changes to a Droplet
+        run: |
+          ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+            cd /var/www/axion-studio &&
+            git pull origin main
+          "
+
+      # Stage 5: Deploy front
+      - name: Deploy front
+        run: |
+          "
+            cd /var/www/axion-studio/front &&
+            npm install &&
+            npm run build &&
+            pm2 restart front
+          "
+
+    # # Step 4: Deploy front
+    # - name: Deploy front
+    #   run: |
+    #     ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+    #       cd /path/to/nextjs-app &&
+    #       git pull origin main &&
+    #       npm install &&
+    #       npm run build &&
+    #       pm2 restart nextjs-app
+    #     "
+
+    # # Step 5: Deploy React Admin Panel
+    # - name: Deploy React Admin Panel
+    #   run: |
+    #     ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+    #       cd /path/to/react-admin &&
+    #       git pull origin main &&
+    #       npm install &&
+    #       pm2 restart react-admin
+    #     "
+
+    # # Step 6: Deploy Node.js API
+    # - name: Deploy Node.js API
+    #   run: |
+    #     ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+    #       cd /path/to/node-api &&
+    #       git pull origin main &&
+    #       npm install &&
+    #       pm2 restart node-api
+    #     "
