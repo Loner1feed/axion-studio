@@ -30,7 +30,7 @@ jobs:
       # Step 4: Pull GH repo to a droplet
       - name: Pull changes to a Droplet
         run: |
-          ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
             cd /var/www/axion-studio &&
             git pull origin main
           "
