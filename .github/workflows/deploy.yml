@@ -38,7 +38,7 @@ jobs:
       # Stage 5: Deploy front
       - name: Deploy front
         run: |
-          "
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
             cd /var/www/axion-studio/front &&
             npm install &&
             npm run build &&
