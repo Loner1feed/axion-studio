@@ -45,6 +45,16 @@ jobs:
             pm2 restart front
           "
 
+      # Stage 6: Deploy front-admin
+      - name: Deploy front-admin
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+            cd /var/www/axion-studio/front-admin &&
+            npm install &&
+            npm run build &&
+            pm2 restart front-admin
+          "
+
     # # Step 4: Deploy front
     # - name: Deploy front
     #   run: |
