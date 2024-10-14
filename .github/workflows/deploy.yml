@@ -63,34 +63,3 @@ jobs:
             npm run build &&
             pm2 restart server
           "
-
-    # # Step 4: Deploy front
-    # - name: Deploy front
-    #   run: |
-    #     ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
-    #       cd /path/to/nextjs-app &&
-    #       git pull origin main &&
-    #       npm install &&
-    #       npm run build &&
-    #       pm2 restart nextjs-app
-    #     "
-
-    # # Step 5: Deploy React Admin Panel
-    # - name: Deploy React Admin Panel
-    #   run: |
-    #     ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
-    #       cd /path/to/react-admin &&
-    #       git pull origin main &&
-    #       npm install &&
-    #       pm2 restart react-admin
-    #     "
-
-    # # Step 6: Deploy Node.js API
-    # - name: Deploy Node.js API
-    #   run: |
-    #     ssh ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
-    #       cd /path/to/node-api &&
-    #       git pull origin main &&
-    #       npm install &&
-    #       pm2 restart node-api
-    #     "
