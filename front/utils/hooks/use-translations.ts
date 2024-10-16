@@ -1,6 +1,7 @@
 import translations from "../translations";
 import { useLang } from "./use-lang";
 
+// This hook returns the correct translation object based on the language provided by use-lang hook
 export const useTranslations = () => {
   const lang = useLang();
 
