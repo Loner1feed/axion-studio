@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-import { languages } from "../const/languages";
+import { languages } from "../const";
 
 // This hook detects language from the browser's URL (Client Side)
 // Redirects user if language is not correct

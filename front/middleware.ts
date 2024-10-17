@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { languages } from "./utils/const/languages";
+import { languages } from "./utils/const";
 
 // Detecting language on the Server Side from browser's URL
 // Redirecting if language is incorrect before the page renders
