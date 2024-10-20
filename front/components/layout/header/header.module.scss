@@ -1,0 +1,19 @@
+.header {
+  font-size: 54px;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.button {
+  margin-right: 20px;
+}

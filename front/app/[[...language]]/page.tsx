@@ -1,21 +1,25 @@
 "use client";
 
-import { FancyDisplay } from "@/components/fancy-display/fancy-display";
 import React from "react";
+// import { useTranslations } from "@/utils/hooks";
 
 import "../globals.scss";
-import { useTranslations } from "@/utils/hooks";
-import { LangSwitcher } from "@/components/lang-switcher/lang-switcher";
+import { Header } from "@/components/layout/header/header";
+import { Container } from "@/components/layout/container/contaner";
 
 export const MainPage = () => {
-  const t = useTranslations();
+  // const t = useTranslations();
 
   return (
     <div>
-      <FancyDisplay>
-        <LangSwitcher />
-        MainPage {t.key}
-      </FancyDisplay>
+      <Container>
+        {/* <FancyDisplay>
+          <LangSwitcher />
+          MainPage {t.key}
+        </FancyDisplay> */}
+
+        <Header />
+      </Container>
     </div>
   );
 };

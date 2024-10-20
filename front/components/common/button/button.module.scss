@@ -1,0 +1,28 @@
+@import "../../../assets/styles/vars.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 15px 35px;
+  background: $accent-blue;
+  border: none;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: $accent-blue-hover;
+  }
+  span {
+    margin-left: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  svg {
+    width: 20px;
+    path {
+      fill: #fff;
+    }
+  }
+}
