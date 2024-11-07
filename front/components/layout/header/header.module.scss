@@ -1,11 +1,21 @@
-.header {
+.content {
   font-size: 54px;
   color: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: 36px;
   padding-bottom: 10px;
+  width: 100%;
+  // position: sticky;
+  // top: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .right {
@@ -16,4 +26,10 @@
 
 .button {
   margin-right: 20px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.showBtn {
+  opacity: 1;
 }

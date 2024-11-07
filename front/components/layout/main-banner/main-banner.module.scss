@@ -1,0 +1,118 @@
+@import "../../../assets/styles/vars.scss";
+
+.mainBanner {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -1000px;
+  left: -1000px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 45%,
+    $accent-blue 100%
+  );
+  aspect-ratio: 1 / 1;
+  background-size: 100%;
+  background-position: center -300px;
+  // animation: bgAnim 2s;
+}
+
+.container {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+span.accent {
+  color: $accent-blue;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.heading {
+  margin-bottom: 22px;
+}
+
+.subHeading {
+  font-size: 24px;
+  max-width: 840px;
+  display: block;
+}
+
+.buttonBlock {
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  i {
+    display: block;
+    margin-top: 10px;
+    text-transform: none;
+    font-style: normal;
+    font-size: 14px;
+    max-width: 300px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    transition-delay: 200ms;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.button {
+  &:hover + i {
+    visibility: visible;
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .subHeading {
+    max-width: 600px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .subHeading {
+    max-width: 420px;
+    font-size: 14px;
+  }
+
+  .heading {
+    margin-bottom: 15px;
+  }
+
+  .buttonBlock {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .subHeading {
+    br {
+      display: none;
+    }
+  }
+
+  .buttonBlock i {
+    font-size: 12px;
+    width: 230px;
+  }
+}
