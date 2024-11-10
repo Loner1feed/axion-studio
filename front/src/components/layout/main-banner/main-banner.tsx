@@ -12,7 +12,7 @@ import { Phone } from "@/src/components/icons";
 import { useTranslations } from "@/src/utils/hooks";
 
 import styles from "./main-banner.module.scss";
-import { MainBannerGradient } from "./main-banner-gradient";
+import { MainBannerGradient } from "./common/gradient";
 
 export const MainBanner: React.FC = () => {
   const t = useTranslations();

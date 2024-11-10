@@ -18,4 +18,8 @@ export const en = {
 
     subButton: "Book a call with us and get a personal offer",
   },
+
+  projectTypes: {
+    heading: "Types of projects we do",
+  },
 };

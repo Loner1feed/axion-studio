@@ -2,7 +2,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-import styles from "./main-banner.module.scss";
+import styles from "../main-banner.module.scss";
 
 export const MainBannerGradient = ({
   hovered = false,
