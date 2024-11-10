@@ -1,9 +1,9 @@
-import { languages } from "@/utils/const";
-import { useChangeLang } from "@/utils/hooks/use-change-lang";
+import { languages } from "@/src/utils/const";
+import { useChangeLang } from "@/src/utils/hooks/use-change-lang";
 import React from "react";
 
 import styles from "./lang-switcher.module.scss";
-import { useLang } from "@/utils/hooks/use-lang";
+import { useLang } from "@/src/utils/hooks/use-lang";
 
 export const LangSwitcher = () => {
   const switcher = useChangeLang();

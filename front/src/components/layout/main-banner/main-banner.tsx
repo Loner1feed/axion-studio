@@ -1,13 +1,15 @@
+"use client";
+
 import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 
 import { Container } from "../container/contaner";
 import { Header } from "../header/header";
-import { Button, Heading } from "@/components/common";
-import { Phone } from "@/components/icons";
+import { Button, Heading } from "@/src/components/common";
+import { Phone } from "@/src/components/icons";
 
-import { useTranslations } from "@/utils/hooks";
+import { useTranslations } from "@/src/utils/hooks";
 
 import styles from "./main-banner.module.scss";
 import { MainBannerGradient } from "./main-banner-gradient";

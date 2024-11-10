@@ -3,7 +3,7 @@
 import React from "react";
 
 import "../globals.scss";
-import { MainBanner } from "@/components/layout";
+import { MainBanner } from "@/src/components/layout";
 
 export const MainPage = () => {
   return (

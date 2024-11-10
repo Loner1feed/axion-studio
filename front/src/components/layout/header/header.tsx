@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Logo, Phone } from "@/components/icons";
+import { Logo, Phone } from "@/src/components/icons";
 import styles from "./header.module.scss";
-import { LangSwitcher } from "@/components/common/lang-switcher/lang-switcher";
-import { Button } from "@/components/common/button/button";
-import { useTranslations } from "@/utils/hooks";
+import { LangSwitcher } from "@/src/components/common/lang-switcher/lang-switcher";
+import { Button } from "@/src/components/common/button/button";
+import { useTranslations } from "@/src/utils/hooks";
 import { Container } from "../container/contaner";
 
 interface HeaderProps {
