@@ -9,8 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-lazy-load-image-component": "^1.6.4",
+    "antd": "^5.17.2",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-lazy-load-image-component": "^1.6.2",
+    "react-router": "^6.28.0",
+    "react-router-dom": "^6.28.0",
+    "sass": "^1.80.6",
+    "scs": "^0.0.20",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
