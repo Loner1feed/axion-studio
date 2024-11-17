@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import router from "./routes";
 
 const PORT = 3002;
 
@@ -6,6 +7,6 @@ const app = express();
 
 app.listen(PORT, () => console.log(`They can hear you... (port ${PORT})`));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("server is alive");
-});
+app.use("/", router);
+
+export default app;

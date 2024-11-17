@@ -1,7 +1,5 @@
 /server/node_modules
+/server/dist
 /front/node_modules
 /front_admin/node_modules
-
-/server/dist
-
 .env
