@@ -4,6 +4,7 @@ import {
   deleteProjectType,
   getProjectTypeById,
   getProjectTypes,
+  getProjectTypesWithParams,
   updateProjectType,
 } from "../models";
 import { errorHandler } from "../utils/helpers/errorHandler";
@@ -41,6 +42,20 @@ export const getProjectTypeByIdController = async (
   }
 };
 
+export const getProjectTypesWithParamsController = async (
+  req: Request,
+  res: Response
+) => {
+  try {
+    const params = req.body;
+    const response = await getProjectTypesWithParams(params);
+
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).send(serverResp[500]);
+  }
+};
+
 export const createProjectTypeController = async (
   req: Request,
   res: Response
@@ -61,6 +76,7 @@ export const updateProjectTypeController = async (
   res: Response
 ): Promise<void> => {
   const id = req.params.id;
+  console.log(id);
   const data = req.body;
 
   try {
