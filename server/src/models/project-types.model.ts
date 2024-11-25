@@ -1,8 +1,8 @@
 import { InsertOneResult, ObjectId, UpdateResult } from "mongodb";
-import db from "../db/mongo.conn";
-import { PROJECT_TYPES_COLL } from "../utils/const";
-import { PaginationResponse, Params } from "../utils/types";
-import { getAggrPipeline } from "../utils/helpers/get-aggr-pipeline";
+import db from "@db/mongo.conn";
+import { PROJECT_TYPES_COLL } from "@utils/const";
+import { getAggrPipeline } from "@utils/helpers";
+import { PaginationResponse, Params } from "@utils/types";
 
 export interface ProjectType {
   id?: string;

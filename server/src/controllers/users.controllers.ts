@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { errorHandler } from "../utils/helpers/errorHandler";
-import { createUser, getUser } from "../models/users.model";
+import { errorHandler } from "@utils/helpers";
+import { createUser, getUser } from "@models/index";
 
 export const loginController = async (req: Request, res: Response) => {
   const { username, password } = req.body;

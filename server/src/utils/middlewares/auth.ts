@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import jwt, { JsonWebTokenError } from "jsonwebtoken";
-import { errorHandler } from "../helpers/errorHandler";
+import { errorHandler } from "@utils/helpers";
 
 export const checkAuth = async (
   req: Request,

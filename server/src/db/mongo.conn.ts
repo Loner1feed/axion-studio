@@ -1,6 +1,8 @@
-import { MongoClient } from "mongodb";
-import { errorHandler } from "../utils/helpers/errorHandler";
+import { errorHandler } from "@utils/helpers";
+import * as dotenv from "dotenv";
+dotenv.config();
 
+import { MongoClient } from "mongodb";
 // env constants
 const uri: string = process.env.ATLAS_URI || "";
 const dbName: string = process.env.DB_NAME || "";

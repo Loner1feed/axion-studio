@@ -6,8 +6,8 @@ import {
   getProjectTypesController,
   getProjectTypesWithParamsController,
   updateProjectTypeController,
-} from "../controllers";
-import { validateParams, validateProjectType } from "../utils/validations";
+} from "@controllers/index";
+import { validateParams, validateProjectType } from "@utils/validations";
 
 const router = express.Router();
 

@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "test": "jest --watchAll  --detectOpenHandles",
     "build": "tsc",
-    "dev": "node --env-file=.env --watch -r ts-node/register src/app.ts",
+    "dev": "tsc && tsc-alias && node dist/app.js",
     "start": "cd dist && node app.js"
+  },
+  "_moduleAliases": {
+    "@controllers": "dist/controllers",
+    "@db": "dist/db",
+    "@models": "dist/models",
+    "@routes": "dist/routes",
+    "@utils": "dist/utils"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +34,7 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "tsc": "^2.0.4",
+    "tsc-alias": "1.8.10",
     "typescript": "^5.4.2"
   },
   "dependencies": {
@@ -37,7 +46,9 @@
     "express": "^4.21.1",
     "joi": "^17.12.2",
     "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
     "mongodb": "^6.5.0",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "tsconfig-paths": "^4.2.0"
   }
 }

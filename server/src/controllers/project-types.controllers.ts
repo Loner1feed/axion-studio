@@ -6,9 +6,9 @@ import {
   getProjectTypes,
   getProjectTypesWithParams,
   updateProjectType,
-} from "../models";
-import { errorHandler } from "../utils/helpers/errorHandler";
-import { serverResp } from "../utils/const";
+} from "@models/index";
+import { serverResp } from "@utils/const";
+import { errorHandler } from "@utils/helpers";
 
 export const getProjectTypesController = async (
   _: any,

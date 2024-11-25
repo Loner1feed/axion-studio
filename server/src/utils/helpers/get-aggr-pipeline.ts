@@ -1,4 +1,4 @@
-import { Params } from "../types";
+import { Params } from "@utils/types";
 
 export const getAggrPipeline = (params: Params) => {
   const { page, pageSize, paramName, paramValue } = params;

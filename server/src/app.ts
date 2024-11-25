@@ -1,6 +1,9 @@
+import "module-alias/register.js";
+import * as dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import cors from "cors";
-import router from "./routes";
+import router from "@routes/index";
 
 const PORT = 3002;
 
