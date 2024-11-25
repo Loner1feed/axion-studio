@@ -3,6 +3,7 @@ import { Button, Card, Form, FormProps, Input, message } from "antd";
 import { useState } from "react";
 import { AxiosError, AxiosResponse } from "axios";
 import { useNavigate } from "react-router-dom";
+import { UsersService } from "@utils/services";
 
 const AuthTitle = () => (
   <h1 style={{ textAlign: "center" }}>
@@ -24,23 +25,24 @@ export const AuthForm = () => {
   const [loading, setLoading] = useState(false);
 
   const finishHandler: FormProps<FieldType>["onFinish"] = (values) => {
-    // setLoading(true);
-    // UsersService.login(values)
-    //   .then((res: AxiosResponse) => {
-    //     if (res.status === 201) {
-    //       const localStorage = window.localStorage;
-    //       localStorage.setItem("token", res.data.token);
-    //       navigate("../main");
-    //     }
-    //   })
-    //   .catch((e: AxiosError) => {
-    //     if (e.response?.status === 404)
-    //       message.error("Can't find user with this username");
-    //     if (e.response?.status === 402) message.error("Incorrect password");
-    //   })
-    //   .then(() => {
-    //     setLoading(false);
-    //   });
+    setLoading(true);
+    console.log(values);
+    UsersService.login(values)
+      .then((res: AxiosResponse) => {
+        if (res.status === 201) {
+          const localStorage = window.localStorage;
+          localStorage.setItem("token", res.data.token);
+          navigate("../main");
+        }
+      })
+      .catch((e: AxiosError) => {
+        if (e.response?.status === 404)
+          message.error("Can't find user with this username");
+        if (e.response?.status === 402) message.error("Incorrect password");
+      })
+      .then(() => {
+        setLoading(false);
+      });
   };
 
   return (

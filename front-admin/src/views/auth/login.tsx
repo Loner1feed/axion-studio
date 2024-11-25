@@ -1,6 +1,5 @@
-import React from "react";
-import { AuthBackground } from "../../components/ui/auth-background/auth-background";
 import { AuthForm } from "./common/_form";
+import { AuthBackground } from "@components/ui/auth-background/auth-background";
 
 export const AuthLogin = () => {
   return (

@@ -2,7 +2,8 @@ import { Layout } from "antd";
 import React from "react";
 import { Location } from "react-router";
 import { Outlet } from "react-router-dom";
-import { SideNav } from "../components/layout/side-nav";
+
+import { SideNav } from "@components/layout/side-nav";
 
 const { Content } = Layout;
 
@@ -11,7 +12,7 @@ interface MainLayoutProps {
   location?: Location;
 }
 
-export const MainLayout: React.FC<MainLayoutProps> = ({ navCollapsed }) => {
+export const MainLayout: React.FC<MainLayoutProps> = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <SideNav />

@@ -1,4 +1,4 @@
-import bg from "../../../assets/auth-background.svg";
+import bg from "@assets/auth-background.svg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 //styles

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu } from "antd";
 import { useLocation } from "react-router-dom";
-import navigationConfig from "../../configs/navigation.config";
+import { navigationConfig } from "@configs/index";
 
 export const MenuContent: React.FC = () => {
   let location = useLocation();
