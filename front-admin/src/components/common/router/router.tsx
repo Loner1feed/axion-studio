@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { IndexLayout, MainLayout } from "@layouts/index";
 import { projectTypesRoute } from "@views/project-types";
+import { technologiesRoute } from "@views/technologies";
 import authRoute from "@views/auth/index";
 
 export const Router: React.FC = () => {
@@ -15,7 +16,7 @@ export const Router: React.FC = () => {
           path: "main",
           element: <MainLayout />,
 
-          children: [projectTypesRoute],
+          children: [projectTypesRoute, technologiesRoute],
         },
 
         authRoute,

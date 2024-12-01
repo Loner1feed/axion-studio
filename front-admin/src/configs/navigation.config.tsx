@@ -1,4 +1,5 @@
 import {
+  CodeOutlined,
   CommentOutlined,
   FileImageOutlined,
   PhoneOutlined,
@@ -26,6 +27,17 @@ const contentNavTree = [
         // call function to generate react-router link
         get label() {
           return generateLabel(this.path, "Projects we do");
+        },
+        breadcrumb: false,
+      },
+
+      {
+        key: `${APP_PREFIX_PATH}/technologies`,
+        path: `${APP_PREFIX_PATH}/technologies`,
+        icon: <CodeOutlined />,
+        // call function to generate react-router link
+        get label() {
+          return generateLabel(this.path, "Technologies we use");
         },
         breadcrumb: false,
       },
