@@ -1,17 +1,17 @@
-import { ProjectType } from "@utils/types";
+import { TechnologyTypes } from "@utils/types";
 import { Button, Form, FormProps, Input, Switch } from "antd";
-import React, { useState } from "react";
+import { useState } from "react";
 
-export interface FieldType extends ProjectType {}
+export interface FieldType extends TechnologyTypes {}
 
-interface ProjectTypesFormProps {
+interface TechnologiesFormProps {
   form?: any;
   onFinish: FormProps["onFinish"];
   loading?: boolean;
   isEdit?: boolean;
 }
 
-export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
+export const TechnologiesForm: React.FC<TechnologiesFormProps> = ({
   form,
   onFinish,
   loading,
@@ -48,6 +48,24 @@ export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
         label="Icon Name"
         name="iconName"
         rules={[{ required: true, message: "Icon name is required" }]}
+      >
+        <Input />
+      </Form.Item>
+
+      {/* TODO: add validation for link format */}
+      <Form.Item<FieldType>
+        label="Technology link"
+        name="href"
+        rules={[{ required: true, message: "Technology link is required" }]}
+      >
+        <Input />
+      </Form.Item>
+
+      {/* TODO: add color picker */}
+      <Form.Item<FieldType>
+        label="Backdrop color"
+        name="backdropColor"
+        rules={[{ required: true, message: "Backdrop color is required" }]}
       >
         <Input />
       </Form.Item>
