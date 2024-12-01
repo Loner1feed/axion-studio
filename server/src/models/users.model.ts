@@ -1,12 +1,7 @@
 import { InsertOneResult, ObjectId } from "mongodb";
 import bcrypt from "bcrypt";
 import db from "@db/mongo.conn";
-
-export interface User {
-  username: string;
-  password: string;
-  id?: ObjectId;
-}
+import { User } from "@utils/types";
 
 export interface LoginData {
   username: string;

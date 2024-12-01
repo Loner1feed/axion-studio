@@ -2,17 +2,12 @@ import { InsertOneResult, ObjectId, UpdateResult } from "mongodb";
 import db from "@db/mongo.conn";
 import { PROJECT_TYPES_COLL } from "@utils/const";
 import { getAggrPipeline } from "@utils/helpers";
-import { PaginationResponse, Params } from "@utils/types";
-
-export interface ProjectType {
-  id?: string;
-  title: string;
-  paragraph: string;
-  iconName: string;
-  showOnFront: boolean;
-}
-
-export type ProjectTypeResponse = PaginationResponse<ProjectType>;
+import {
+  PaginationResponse,
+  Params,
+  ProjectType,
+  ProjectTypeResponse,
+} from "@utils/types";
 
 export const getProjectTypes = async (): Promise<ProjectType[]> => {
   return await db

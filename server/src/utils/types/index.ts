@@ -1,12 +1,4 @@
-export interface Params {
-  page: number;
-  pageSize: number;
-  paramName: string;
-  paramValue: string | number | boolean;
-}
-
-export interface PaginationResponse<T> {
-  page: number;
-  totalCount: number;
-  data: T[];
-}
+export * from "./users.types";
+export * from "./project-types.types";
+export * from "./other.types";
+export * from "./technologies.types";
