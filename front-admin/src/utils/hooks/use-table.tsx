@@ -75,7 +75,7 @@ export const useTable = <T extends UseTableParams>({
   const tableChangeHandler: TableProps["onChange"] = (
     pagination,
     filters,
-    sorter
+    _
   ) => {
     const { current, pageSize } = pagination;
     const filterKey = Object.keys(filters)[0];
