@@ -2,7 +2,7 @@ import { ProjectTypesCreate } from "./create";
 import { ProjectTypesEdit } from "./edit";
 import { ProjectTypesList } from "./list";
 
-const projectTypesRoute = {
+export const projectTypesRoute = {
   path: "project-types",
   children: [
     // project types list
@@ -19,10 +19,8 @@ const projectTypesRoute = {
 
     // project types edit
     {
-      path: "edit",
+      path: "edit/:itemId",
       element: <ProjectTypesEdit />,
     },
   ],
 };
-
-export default projectTypesRoute;
