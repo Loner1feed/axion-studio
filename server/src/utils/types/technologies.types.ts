@@ -1,5 +1,7 @@
+import { PaginationResponse } from "./other.types";
+
 export interface TechnologyTypes {
-  _id?: string;
+  id?: string;
   iconName: string;
   title: string;
   paragraph: string;
@@ -7,3 +9,5 @@ export interface TechnologyTypes {
   href: string;
   showOnFront: boolean;
 }
+
+export type TechnologiesResponse = PaginationResponse<TechnologyTypes>;
