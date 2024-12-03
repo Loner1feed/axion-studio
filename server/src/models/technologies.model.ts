@@ -4,7 +4,7 @@ getTechnologyById - OK
 getTechnologiesWithParams - OK
 createTechnology - OK
 updateTechnology - OK
-deleteTechnology
+deleteTechnology - OK
 */
 
 import db from "@db/mongo.conn";
