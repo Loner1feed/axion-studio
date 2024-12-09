@@ -6,6 +6,7 @@ import {
   getProcessesWithParamsController,
   updateProcessController,
 } from "@controllers/index";
+import { validateParams, validateProcess } from "@utils/validations";
 import express from "express";
 
 const router = express.Router();
@@ -19,13 +20,13 @@ router.get("/", getProcessesController);
 router.get("/:id/", getProcessByIdController);
 
 // get processes with params
-router.post("/", getProcessesWithParamsController);
+router.post("/", [validateParams], getProcessesWithParamsController);
 
 // create process
-router.post("/create", createProcessController);
+router.post("/create", [validateProcess], createProcessController);
 
 // update process
-router.put("/:id/", updateProcessController);
+router.put("/:id/", [validateProcess], updateProcessController);
 
 // delete process
 router.delete("/:id/", deleteProcessController);
