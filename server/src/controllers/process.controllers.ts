@@ -4,7 +4,7 @@ getProcessByIdController - OK
 getProcessesWithParamsController - OK
 createProcessController - OK
 updateProcessController - OK
-deleteProcessController
+deleteProcessController - OK
 */
 
 import {
