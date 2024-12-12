@@ -1,10 +1,10 @@
 import {
-  createProcessController,
+  createSocialController,
   deleteSocialController,
   getSocialByIdController,
   getSocialsController,
   getSocialsWithParamsController,
-  updateProcessController,
+  updateSocialController,
 } from "@controllers/index";
 import { validateParams, validateSocials } from "@utils/validations";
 import express from "express";
@@ -23,10 +23,10 @@ router.get("/:id/", getSocialByIdController);
 router.post("/", [validateParams], getSocialsWithParamsController);
 
 // create social
-router.post("/create", [validateSocials], createProcessController);
+router.post("/create", [validateSocials], createSocialController);
 
 // update social
-router.post("/:id/", [validateSocials], updateProcessController);
+router.put("/:id/", [validateSocials], updateSocialController);
 
 // delete social
 router.delete("/:id/", deleteSocialController);
