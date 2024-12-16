@@ -4,3 +4,4 @@ export * from "./user.validation";
 export * from "./technologies.validation";
 export * from "./process.validation";
 export * from "./socials.validation";
+export * from "./advantages.validation";

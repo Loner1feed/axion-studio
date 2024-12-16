@@ -5,6 +5,7 @@ import projectTypesRoute from "./project-types.routes";
 import technologiesRoute from "./technologies.routes";
 import processesRoute from "./process.routes";
 import socialsRoute from "./socials.routes";
+import advantagesRoute from "./advantages.routes";
 
 const router = Router();
 
@@ -18,5 +19,6 @@ router.use("/projectTypes", projectTypesRoute);
 router.use("/technologies", technologiesRoute);
 router.use("/processes", processesRoute);
 router.use("/socials", socialsRoute);
+router.use("/advantages", advantagesRoute);
 
 export default router;
