@@ -41,6 +41,28 @@ const contentNavTree = [
         },
         breadcrumb: false,
       },
+
+      {
+        key: `${APP_PREFIX_PATH}/socials`,
+        path: `${APP_PREFIX_PATH}/socials`,
+        icon: <CodeOutlined />,
+        // call function to generate react-router link
+        get label() {
+          return generateLabel(this.path, "Our socials");
+        },
+        breadcrumb: false,
+      },
+
+      {
+        key: `${APP_PREFIX_PATH}/process`,
+        path: `${APP_PREFIX_PATH}/process`,
+        icon: <CodeOutlined />,
+        // call function to generate react-router link
+        get label() {
+          return generateLabel(this.path, "How the process goes");
+        },
+        breadcrumb: false,
+      },
     ],
   },
 ];
