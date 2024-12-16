@@ -5,6 +5,7 @@ const ProcessSchema = Joi.object({
   title: Joi.string().required(),
   paragraph: Joi.string().required(),
   number: Joi.string().required(),
+  showOnFront: Joi.boolean().required(),
 });
 
 export const validateProcess = (
