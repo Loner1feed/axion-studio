@@ -63,6 +63,17 @@ const contentNavTree = [
         },
         breadcrumb: false,
       },
+
+      {
+        key: `${APP_PREFIX_PATH}/advantages`,
+        path: `${APP_PREFIX_PATH}/advantages`,
+        icon: <CodeOutlined />,
+        // call function to generate react-router link
+        get label() {
+          return generateLabel(this.path, "Our advantages");
+        },
+        breadcrumb: false,
+      },
     ],
   },
 ];
