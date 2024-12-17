@@ -6,7 +6,7 @@ export const AdvantagesSchema = Joi.object({
   subheading: Joi.string().required(),
   paragraph: Joi.string().required(),
   videoUrl: Joi.string().required(),
-  showOnFront: Joi.string().required(),
+  showOnFront: Joi.boolean().required(),
 });
 
 export const validateAdvantages = (
