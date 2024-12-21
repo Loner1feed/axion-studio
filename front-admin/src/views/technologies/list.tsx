@@ -2,7 +2,16 @@ import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useTable } from "@utils/hooks";
 import { TechnologiesService } from "@utils/services/technologies.service";
 import { TechnologyTypes } from "@utils/types";
-import { Button, Card, message, Popconfirm, Space, Switch, Table } from "antd";
+import {
+  Button,
+  Card,
+  message,
+  Popconfirm,
+  Space,
+  Switch,
+  Table,
+  Tag,
+} from "antd";
 import { AxiosError, AxiosResponse } from "axios";
 import React from "react";
 import { useNavigate } from "react-router";
@@ -72,6 +81,12 @@ export const TechnologiesList: React.FC = () => {
       title: "Backdrop color",
       dataIndex: "backdropColor",
       key: "backdropColor",
+      render: (record: string) => (
+        <Tag style={{ color: record }} color={record}>
+          Color provided
+        </Tag>
+      ),
+      width: 150,
     },
 
     {

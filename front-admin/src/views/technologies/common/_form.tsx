@@ -1,5 +1,5 @@
 import { TechnologyTypes } from "@utils/types";
-import { Button, Form, FormProps, Input, Switch } from "antd";
+import { Button, ColorPicker, Form, FormProps, Input, Switch } from "antd";
 import { useState } from "react";
 
 export interface FieldType extends TechnologyTypes {}
@@ -61,13 +61,15 @@ export const TechnologiesForm: React.FC<TechnologiesFormProps> = ({
         <Input />
       </Form.Item>
 
-      {/* TODO: add color picker */}
       <Form.Item<FieldType>
         label="Backdrop color"
         name="backdropColor"
         rules={[{ required: true, message: "Backdrop color is required" }]}
+        getValueFromEvent={(color) => {
+          return "#" + color.toHex();
+        }}
       >
-        <Input />
+        <ColorPicker size="large" showText />
       </Form.Item>
 
       <Form.Item<FieldType>
