@@ -5,3 +5,4 @@ export * from "./technologies.types";
 export * from "./processes.types";
 export * from "./socials.types";
 export * from "./advantages.types";
+export * from "./feedback.types";
