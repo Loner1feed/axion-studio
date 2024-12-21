@@ -4,3 +4,4 @@ export * from "./technologies.model";
 export * from "./process.model";
 export * from "./socials.model";
 export * from "./advantages.model";
+export * from "./feedback.model";
