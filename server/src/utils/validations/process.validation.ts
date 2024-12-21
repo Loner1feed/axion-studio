@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import Joi, { ValidationResult } from "joi";
+import { getValidationFn } from "@utils/helpers";
+import Joi from "joi";
 
 const ProcessSchema = Joi.object({
   title: Joi.string().required(),
@@ -8,16 +8,4 @@ const ProcessSchema = Joi.object({
   showOnFront: Joi.boolean().required(),
 });
 
-export const validateProcess = (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const result: ValidationResult = ProcessSchema.validate(req.body, {
-    abortEarly: true,
-  });
-
-  if (result.error)
-    res.status(400).json(result.error.details.map((err) => err.message));
-  else next();
-};
+export const validateProcess = getValidationFn(ProcessSchema);

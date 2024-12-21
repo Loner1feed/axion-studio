@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import Joi, { ValidationResult } from "joi";
+import { getValidationFn } from "@utils/helpers";
+import Joi from "joi";
 
 const TechnologiesSchema = Joi.object({
   title: Joi.string().required(),
@@ -10,16 +10,4 @@ const TechnologiesSchema = Joi.object({
   showOnFront: Joi.boolean().required(),
 });
 
-export const validateTechnology = (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const result: ValidationResult = TechnologiesSchema.validate(req.body, {
-    abortEarly: true,
-  });
-
-  if (result.error)
-    res.status(400).json(result.error.details.map((err) => err.message));
-  else next();
-};
+export const validateTechnology = getValidationFn(TechnologiesSchema);
