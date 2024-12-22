@@ -21,7 +21,7 @@ export const MainBanner: React.FC = () => {
   const t = useTranslations();
   const { isHideHeader } = useContext(MainPageContext);
 
-  const [background, setBackground] = useState("black");
+  const [background, setBackground] = useState("#8B5FBF");
   const [hovered, setHovered] = useState(false);
 
   const getRandomColor = (index: number) => {
@@ -31,10 +31,10 @@ export const MainBanner: React.FC = () => {
   const typewriterComponentOnInit = (typewriter: TypewriterClass) => {
     t.mainBanner.heading.dynamic.forEach((animation: string, index: number) => {
       typewriter
-        .callFunction(() => getRandomColor(index))
         .typeString(animation)
         .pauseFor(1000)
-        .deleteAll();
+        .deleteAll()
+        .callFunction(() => getRandomColor(index));
     });
 
     typewriter.start();
