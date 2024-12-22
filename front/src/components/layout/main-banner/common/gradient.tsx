@@ -16,7 +16,7 @@ export const MainBannerGradient = ({
       animate={{
         backgroundPosition: hovered ? "center -500px" : "center -300px",
       }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.75 }}
     />
   );
 };
