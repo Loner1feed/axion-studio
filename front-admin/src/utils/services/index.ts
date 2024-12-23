@@ -5,3 +5,4 @@ export * from "./technologies.service";
 export * from "./socials.service";
 export * from "./process.service";
 export * from "./advantages.service";
+export * from "./feedback.service";

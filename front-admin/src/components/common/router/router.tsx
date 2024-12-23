@@ -8,6 +8,7 @@ import { socialsRoute } from "@views/socials";
 import authRoute from "@views/auth/index";
 import { processRoute } from "@views/process";
 import { advantagesRoute } from "@views/advantages";
+import { feedbackRoute } from "@views/feedback";
 
 export const Router: React.FC = () => {
   const router = createBrowserRouter([
@@ -24,7 +25,8 @@ export const Router: React.FC = () => {
             technologiesRoute,
             socialsRoute,
             processRoute,
-            advantagesRoute
+            advantagesRoute,
+            feedbackRoute,
           ],
         },
 
