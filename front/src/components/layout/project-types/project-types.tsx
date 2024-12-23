@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React from "react";
 
 import styles from "./project-types.module.scss";
 import { Heading } from "../../common";
@@ -13,16 +13,16 @@ import { ProjectType } from "@/src/utils/types";
 interface ProjectTypesProps {
   data: ProjectType[];
 }
-import { MainPageContext } from "@/src/app/[[...language]]/page.context";
+// import { MainPageContext } from "@/src/app/[[...language]]/page.context";
 
 export const ProjectTypes: React.FC<ProjectTypesProps> = ({ data }) => {
   const t = useTranslations();
-  const { revealHeaderOnScrollToElementRef } = useContext(MainPageContext);
+  // const { revealHeaderOnScrollToElementRef } = useContext(MainPageContext);
 
   return (
     <FadeInOnView>
       <div
-        ref={revealHeaderOnScrollToElementRef}
+        // ref={revealHeaderOnScrollToElementRef}
         className={styles.projectTypes}
       >
         <Container>
