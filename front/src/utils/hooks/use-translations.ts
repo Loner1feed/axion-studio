@@ -1,3 +1,5 @@
+"use client";
+
 import translations from "../translations";
 import { useLang } from "./use-lang";
 
