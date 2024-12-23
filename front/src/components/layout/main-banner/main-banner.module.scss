@@ -43,11 +43,13 @@ span.accent {
 }
 
 .heading {
+  margin: 0 auto;
   margin-bottom: 22px;
+  line-height: 70px;
 }
 
 .subHeading {
-  font-size: 24px;
+  font-size: 18px;
   max-width: 840px;
   display: block;
 }
@@ -57,46 +59,46 @@ span.accent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  i {
-    display: block;
-    margin-top: 10px;
-    text-transform: none;
-    font-style: normal;
-    font-size: 14px;
-    max-width: 300px;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: 0.5s;
-    transition-delay: 200ms;
-    position: relative;
-    z-index: -1;
-  }
 }
 
-.button {
-  &:hover + i {
-    visibility: visible;
-    opacity: 0.9;
-    transform: translateY(0);
-  }
+.subButton {
+  display: block;
+  margin-top: 10px;
+  text-transform: none;
+  font-style: normal;
+  font-size: 14px;
+  max-width: 300px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 0.75s;
+  transition-delay: 100ms;
+  position: relative;
+  z-index: -1;
+}
+
+.buttonBlock:hover ~ .subButton {
+  visibility: visible;
+  opacity: 0.9;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 980px) {
   .subHeading {
     max-width: 600px;
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 720px) {
   .subHeading {
     max-width: 420px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .heading {
     margin-bottom: 15px;
+    line-height: 50px;
   }
 
   .buttonBlock {
@@ -104,14 +106,17 @@ span.accent {
   }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 550px) {
+  .heading {
+    line-height: 35px;
+  }
   .subHeading {
     br {
       display: none;
     }
   }
 
-  .buttonBlock i {
+  .subButton {
     font-size: 12px;
     width: 230px;
   }

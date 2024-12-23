@@ -17,7 +17,7 @@ export default async function Page() {
   const [projectTypes] = await Promise.all([projectTypesData]);
 
   return (
-    <div>
+    <MainPageContext.Provider value={toggleHeader}>
       <MainBanner />
       <ProjectTypes data={projectTypes} />
     </div>

@@ -3,22 +3,16 @@ export const en = {
   actions: {
     book: "Book a call",
   },
-
   mainBanner: {
     heading: {
-      pre: "Effective ",
-      accent: "IT-Solutions",
-      post: " for your business to grow",
+      main: "Fast 🚀 and with guaranteed results, ",
+      nextLine: "we create for you  ",
+      dynamic: ["websites.", "applications.", "chatbots"],
     },
-
-    subHeading: {
-      pre: "We create solutions that not only exist, but actually work",
-      accent: " for your business.",
-    },
-
+    subHeading:
+      "We create websites, applications, and bots with guaranteed deadlines and maximum conversion. Invest in results that will bring you long-term benefits.",
     subButton: "Book a call with us and get a personal offer",
   },
-
   projectTypes: {
     heading: "Types of projects we do",
   },

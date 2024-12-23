@@ -1,10 +1,11 @@
 import React from "react";
+import { IconsProps } from "./icons.props";
 
-export const Logo: React.FC = () => {
+export const Logo: React.FC<IconsProps> = ({ width = 210, height = 43 }) => {
   return (
     <svg
-      width="210"
-      height="43"
+      width={width}
+      height={height}
       viewBox="0 0 210 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
