@@ -16,6 +16,11 @@ export const ru = {
   projectTypes: {
     heading: "Типы проектов, которые мы делаем",
   },
+
+  technologies: {
+    heading: "Технологии, которые мы используем",
+  },
+
   benefits: {
     heading: "Ваши выгоды от сотрудничества с нами",
   },
