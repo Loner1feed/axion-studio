@@ -1,4 +1,10 @@
 @import "../../../assets/styles/vars.scss";
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .projectTypes {
   padding: 60px 0;
 }
@@ -38,8 +44,7 @@
 }
 
 .backdrop {
-  // change to $accent-blue 👇
-  background: #0385e6;
+  background: $accent-blue;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -84,8 +89,7 @@
   top: -24px;
   padding: 16px;
   border-radius: 50%;
-  // change to $accent-blue 👇
-  background: #0385e6;
+  background: $accent-blue;
   svg {
     width: 100%;
     height: 100%;
@@ -100,7 +104,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 90px;
-  padding: 0px 12px;
+  padding: 60px 12px;
 }
 // PROJECT GRID END
 .cursorBackdrop {
@@ -123,6 +127,10 @@
 }
 
 @media screen and (max-width: 720px) {
+  .heading {
+    margin-bottom: 10px;
+  }
+
   // PROJECT ITEM
   .content {
     padding: 30px 40px;
@@ -209,7 +217,7 @@
   // PROJECT ITEM END
 
   .grid {
-    padding: 0px 6px;
+    padding: 30px 6px;
     grid-gap: 30px;
   }
 }

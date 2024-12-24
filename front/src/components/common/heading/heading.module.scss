@@ -19,4 +19,8 @@ h1.heading {
 h2.heading {
   font-weight: 800;
   font-size: 36px;
+
+  @media (max-width: 720px) {
+    font-size: 28px;
+  }
 }
