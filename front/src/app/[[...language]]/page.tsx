@@ -102,7 +102,6 @@ export default async function Page() {
   return (
     <div>
       <MainBanner />
-      <div style={{ height: "100vh" }}></div>
       <ProjectTypes data={projectTypes} />
       <Technologies data={technologies} />
     </div>
