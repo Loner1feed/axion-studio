@@ -1,48 +1,34 @@
 "use client";
 
-import React, { useContext, useState } from "react";
-
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-
-import { Container } from "../container/contaner";
-import { Header } from "../header/header";
+import { useTranslations, useVisibility } from "@/src/utils/hooks";
 import { Button, Heading } from "@/src/components/common";
 import { Phone } from "@/src/components/icons";
-
-import { useTranslations } from "@/src/utils/hooks";
-import styles from "./main-banner.module.scss";
 import { MainBannerGradient } from "./common/gradient";
-import TypewriterComponent, { TypewriterClass } from "typewriter-effect";
+import { TypeWriter } from "./common/typewriter";
+import { Container } from "../container/contaner";
+import { Header } from "../header/header";
 
-import "./typewrite.scss";
-import { MainPageContext } from "@/src/app/[[...language]]/page.context";
+import styles from "./main-banner.module.scss";
 
 export const MainBanner: React.FC = () => {
   const t = useTranslations();
-  const { isHideHeader } = useContext(MainPageContext);
 
-  const [background, setBackground] = useState("#8B5FBF");
+  const { ref, isVisible } = useVisibility(
+    {
+      // At least 50% of the element must be visible
+      threshold: 0.2,
+    },
+    // An element is initially visible
+    true
+  );
+
   const [hovered, setHovered] = useState(false);
 
-  const getRandomColor = (index: number) => {
-    setBackground(() => ["#F8A23E", "#2E8B57", "#8B5FBF"][index]);
-  };
-
-  const typewriterComponentOnInit = (typewriter: TypewriterClass) => {
-    t.mainBanner.heading.dynamic.forEach((animation: string, index: number) => {
-      typewriter
-        .typeString(animation)
-        .pauseFor(1000)
-        .deleteAll()
-        .callFunction(() => getRandomColor(index));
-    });
-
-    typewriter.start();
-  };
-
   return (
-    <div className={styles.mainBanner}>
-      <Header showBtn={!isHideHeader} />
+    <div className={styles.mainBanner} ref={ref}>
+      <Header showBtn={!isVisible} />
       <MainBannerGradient hovered={hovered} />
       <Container className={styles.container}>
         <motion.div
@@ -54,13 +40,7 @@ export const MainBanner: React.FC = () => {
             {t.mainBanner.heading.main}
             <br />
             {t.mainBanner.heading.nextLine}
-
-            <span style={{ background, borderRadius: 30 }}>
-              <TypewriterComponent
-                onInit={typewriterComponentOnInit}
-                options={{ autoStart: true, loop: true }}
-              />
-            </span>
+            <TypeWriter />
           </Heading>
         </motion.div>
 
