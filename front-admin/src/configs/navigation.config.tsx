@@ -76,6 +76,24 @@ const contentNavTree = [
       },
     ],
   },
+
+  {
+    key: "Feedback",
+    label: "Feedback",
+    type: "group",
+    children: [
+      {
+        key: `${APP_PREFIX_PATH}/feedback`,
+        path: `${APP_PREFIX_PATH}/feedback`,
+        icon: <CodeOutlined />,
+        // call function to generate react-router link
+        get label() {
+          return generateLabel(this.path, "Our feedback");
+        },
+        breadcrumb: false,
+      },
+    ],
+  },
 ];
 
 export const navigationConfig = [...contentNavTree];
