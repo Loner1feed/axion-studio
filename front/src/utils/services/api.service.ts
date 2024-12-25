@@ -4,4 +4,8 @@ export class ApiService {
   static getProjectTypes() {
     return $api.get("/projectTypes");
   }
+
+  static getTechnologies() {
+    return $api.get("/technologies");
+  }
 }

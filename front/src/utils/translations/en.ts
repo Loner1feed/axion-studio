@@ -16,4 +16,8 @@ export const en = {
   projectTypes: {
     heading: "Types of projects we do",
   },
+
+  technologies: {
+    heading: "Technologies we use",
+  },
 };

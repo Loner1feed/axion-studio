@@ -15,7 +15,11 @@ export const Header: React.FC<HeaderProps> = ({ showBtn = false }) => {
   const t = useTranslations();
 
   return (
-    <header className={styles.header}>
+    <header
+      className={
+        !showBtn ? styles.header : `${styles.header} ${styles.headerSmall}`
+      }
+    >
       <Container className={styles.content}>
         <Logo />
         <div className={styles.right}>
