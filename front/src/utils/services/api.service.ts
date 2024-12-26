@@ -8,4 +8,8 @@ export class ApiService {
   static getTechnologies() {
     return $api.get("/technologies");
   }
+
+  static getProcesses() {
+    return $api.get("/processes");
+  }
 }
