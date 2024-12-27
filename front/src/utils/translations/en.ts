@@ -20,4 +20,8 @@ export const en = {
   technologies: {
     heading: "Technologies we use",
   },
+
+  benefits: {
+    heading: "Why is it worth cooperating with us?",
+  },
 };
