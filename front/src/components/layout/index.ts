@@ -3,3 +3,4 @@ export * from "./header/header";
 export * from "./main-banner/main-banner";
 export * from "./project-types/project-types";
 export * from "./technologies/technologies";
+export * from "./process/process";

@@ -17,6 +17,10 @@ export const en = {
     heading: "Types of projects we do",
   },
 
+  process: {
+    heading: "How the process goes"
+  },
+
   technologies: {
     heading: "Technologies we use",
   },
