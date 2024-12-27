@@ -3,4 +3,5 @@ export interface ProcessTypes {
   title: string;
   paragraph: string;
   number: string;
+  showOnFront: boolean;
 }

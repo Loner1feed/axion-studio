@@ -7,7 +7,8 @@ import styles from "../process.module.scss";
 import icons from "@/src/components/icons";
 import { ProcessTypes } from "@/src/utils/types";
 
-interface ProcessHeadingProps extends Omit<ProcessTypes, "paragraph"> {
+interface ProcessHeadingProps
+  extends Omit<Omit<ProcessTypes, "showOnFront">, "paragraph"> {
   active?: boolean;
   onClick?: (e: React.MouseEvent) => void;
   delayValue: number;
