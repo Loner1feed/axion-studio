@@ -20,11 +20,13 @@ export const ProcessMain: React.FC<ProcessMainProps> = ({ data }) => {
   const activeItem = activeId ? data.find((el) => el._id === activeId) : null;
 
   const sortData = (data: ProcessTypes[]) => {
-    return data.sort((el1: ProcessTypes, el2: ProcessTypes) => {
-      if (Number(el1.number) < Number(el2.number)) return -1;
-      else if (Number(el2.number) < Number(el1.number)) return 1;
-      return 0;
-    });
+    return data
+      .filter((item) => item.showOnFront)
+      .sort((el1: ProcessTypes, el2: ProcessTypes) => {
+        if (Number(el1.number) < Number(el2.number)) return -1;
+        else if (Number(el2.number) < Number(el1.number)) return 1;
+        return 0;
+      });
   };
 
   // set active element on first load and data collection
@@ -46,7 +48,7 @@ export const ProcessMain: React.FC<ProcessMainProps> = ({ data }) => {
           {sortData(data).map((el: ProcessTypes, i) => (
             <ProcessHeading
               title={el.title}
-              number={el.number}
+              number={i <= 10 ? `0${i + 1}` : String(i + 1)}
               active={activeId === el._id}
               onClick={() => setActiveId(el._id)}
               key={i}

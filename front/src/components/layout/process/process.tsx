@@ -15,12 +15,16 @@ interface ProcessProps {
 export const Process: React.FC<ProcessProps> = ({ data = [] }) => {
   const t = useTranslations();
 
-  return data.length ? (
+  if (!data.length) {
+    return null;
+  }
+
+  return (
     <div className={styles.process}>
       <Container>
         <Heading className={styles.heading}>{t.process.heading}</Heading>
         <ProcessMain data={data} />
       </Container>
     </div>
-  ) : null;
+  );
 };
