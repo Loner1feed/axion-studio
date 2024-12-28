@@ -10,6 +10,7 @@ import { TypeScriptIcon } from "./typescript";
 export * from "./logo";
 export * from "./phone";
 export * from "./axion";
+export * from "./check";
 
 const icons = {
   logo: <Logo />,

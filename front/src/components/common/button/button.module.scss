@@ -13,7 +13,6 @@
     background: $accent-blue-hover;
   }
   span {
-    margin-left: 10px;
     color: #fff;
     font-weight: 500;
     font-size: 18px;
@@ -22,6 +21,7 @@
 
   svg {
     width: 20px;
+    margin-right: 10px;
     path {
       fill: #fff;
     }
@@ -36,4 +36,9 @@
       width: 18px;
     }
   }
+}
+
+.disabled {
+  filter: grayscale(1);
+  pointer-events: none;
 }

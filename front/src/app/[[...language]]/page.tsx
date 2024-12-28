@@ -6,6 +6,7 @@ import {
   Technologies,
   ProjectTypes,
   Process,
+  Contact,
 } from "@/src/components/layout";
 import { ApiService } from "@/src/utils/services";
 
@@ -27,50 +28,41 @@ async function getProcesses() {
   return res.data;
 }
 
+// async function getSocials() {}
+
 // temporary
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const processMockData = [
+const socialsMockData = [
   {
-    _id: "1",
-    number: "01",
-    title: "Meet",
-    paragraph:
-      "aboba aboba aboba aboba aboba aboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba aboba boba aboba aboba aboba aboba aboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba abobaaboba aboba aboba aboba aboba",
+    label: "Social 1",
+    iconName: "react",
+    backdropColor: "#7BD2EB",
+    href: "https://google.com",
+    showOnFront: true,
   },
 
   {
-    _id: "3",
-    number: "03",
-    title: "Design",
-    paragraph: "aboba aboba aboba aboba aboba 2",
+    label: "Social 2",
+    iconName: "react",
+    backdropColor: "#7BD2EB",
+    href: "https://google.com",
+    showOnFront: true,
   },
 
   {
-    _id: "4",
-    number: "04",
-    title: "Development",
-    paragraph: "aboba aboba aboba aboba aboba 3",
+    label: "Social 3",
+    iconName: "react",
+    backdropColor: "#7BD2EB",
+    href: "https://google.com",
+    showOnFront: true,
   },
 
   {
-    _id: "2",
-    number: "02",
-    title: "Planning",
-    paragraph: "aboba aboba aboba aboba aboba",
-  },
-
-  {
-    _id: "5",
-    number: "05",
-    title: "Testing",
-    paragraph: "aboba aboba aboba aboba aboba 2",
-  },
-
-  {
-    _id: "6",
-    number: "06",
-    title: "Launch!",
-    paragraph: "aboba aboba aboba aboba aboba 3",
+    label: "Social 4",
+    iconName: "react",
+    backdropColor: "#7BD2EB",
+    href: "https://google.com",
+    showOnFront: true,
   },
 ];
 
@@ -93,6 +85,7 @@ export default async function Page() {
       <ProjectTypes data={projectTypes} />
       <Technologies data={technologies} />
       <Process data={processes} />
+      <Contact data={socialsMockData} />
     </div>
   );
 }

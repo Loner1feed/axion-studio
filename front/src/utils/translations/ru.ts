@@ -28,4 +28,47 @@ export const ru = {
   benefits: {
     heading: "Ваши выгоды от сотрудничества с нами",
   },
+
+  form: {
+    errors: {
+      email: {
+        required: "Email обязателен",
+        invalid: "Некорректный Email",
+      },
+
+      name: {
+        required: "Имя обязательно",
+      },
+      surname: {
+        required: "Фамилия обязательна",
+      },
+      message: {
+        required: "Сообщение обязательно",
+      },
+    },
+
+    placeholders: {
+      name: "Ваше имя",
+      surname: "Ваша фамилия",
+      email: "Email",
+      message: "Ваше сообщение",
+    },
+
+    endScreen: {
+      title: "Спасибо!",
+      subheading: "Мы скоро с вами свяжемся",
+    },
+
+    submit: "Отправить",
+  },
+
+  contact: {
+    title: "Свяжитесь с нами",
+    subtitle: {
+      pre: "Заполните форму или воспользуйтесь ссылками ниже, чтобы получить консультацию ",
+      accent: "с нашими экспертами",
+    },
+    socialsHeading: "Свяжитесь с помощью:",
+    formHeading: "Или заполните форму обратной связи",
+  },
 };

@@ -1,3 +1,4 @@
+import { FeedbackShort } from "../types";
 import { $api } from "./axios.service";
 
 export class ApiService {
@@ -11,5 +12,9 @@ export class ApiService {
 
   static getProcesses() {
     return $api.get("/processes");
+  }
+
+  static sendFeedback(data: FeedbackShort) {
+    return $api.post("/feedback/create", data);
   }
 }

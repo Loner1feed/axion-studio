@@ -18,10 +18,53 @@ export const en = {
   },
 
   process: {
-    heading: "How the process goes"
+    heading: "How the process goes",
   },
 
   technologies: {
     heading: "Technologies we use",
+  },
+
+  form: {
+    errors: {
+      email: {
+        required: "Email is required",
+        invalid: "Invalid email",
+      },
+
+      name: {
+        required: "Name is required",
+      },
+      surname: {
+        required: "Surname is required",
+      },
+      message: {
+        required: "Message is required",
+      },
+    },
+
+    placeholders: {
+      name: "Your name",
+      surname: "Your surname",
+      email: "Email",
+      message: "Your message",
+    },
+
+    endScreen: {
+      title: "Thank You!",
+      subheading: "We will contact you soon",
+    },
+
+    submit: "Submit",
+  },
+
+  contact: {
+    title: "Contact us",
+    subtitle: {
+      pre: "Fill out the form of use some of the links below to get consultation ",
+      accent: "with our experts",
+    },
+    socialsHeading: "Reach out via:",
+    formHeading: "Or fill out the form",
   },
 };
