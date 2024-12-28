@@ -20,7 +20,7 @@ export const ProjectTypes: React.FC<ProjectTypesProps> = ({ data }) => {
     <FadeInOnView>
       <div className={styles.projectTypes}>
         <Container>
-          <Heading className={styles.heading}>{t.projectTypes.heading}</Heading>
+          <Heading className={styles.heading}>{t.benefits.heading}</Heading>
           <ProjectGrid data={data} />
         </Container>
       </div>

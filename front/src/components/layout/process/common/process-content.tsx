@@ -25,6 +25,7 @@ export const ProcessContent: React.FC<ProcessContentProps> = ({
         <AnimatePresence mode="wait">
           <motion.h3
             key={title}
+            className={styles.title}
             variants={contentVariants}
             initial="hidden"
             animate="visible"
@@ -42,7 +43,10 @@ export const ProcessContent: React.FC<ProcessContentProps> = ({
             transition={{ duration: 0.3, delay: 0.1 }}
           >
             <CustomScroll>
-              <p>{paragraph}</p>
+              <div
+                className={styles.paragraph}
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+              />
             </CustomScroll>
           </motion.div>
         </AnimatePresence>

@@ -25,6 +25,10 @@ export const en = {
     heading: "Technologies we use",
   },
 
+  benefits: {
+    heading: "Why is it worth cooperating with us?",
+  },
+
   form: {
     errors: {
       email: {
