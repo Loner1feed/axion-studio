@@ -16,16 +16,15 @@ export const LangSwitcher = () => {
   return (
     <div className={styles.switcher}>
       {languages.map((el, i) => (
-        <>
+        <React.Fragment key={`lang-item-${i}`}>
           <span
-            key={`lang-item-${i}`}
             className={defineClassNames(el, lang)}
             onClick={() => switcher(el)}
           >
             {el}
           </span>
           <span className={styles.divider}></span>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
