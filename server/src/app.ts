@@ -1,3 +1,8 @@
+/*
+TODO: заменить везде "iconName" на "icon".
+      В это поле мы будем записывать ссылку на иконку из Cloudinary.
+*/
+
 import "module-alias/register.js";
 import * as dotenv from "dotenv";
 dotenv.config();

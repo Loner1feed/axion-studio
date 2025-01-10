@@ -3,8 +3,10 @@ import { PaginationResponse } from ".";
 export interface ProjectType {
   id?: string;
   title: string;
+  subtitle: string;
   paragraph: string;
-  iconName: string;
+  icon: string;
+  order: number;
   showOnFront: boolean;
 }
 

@@ -3,8 +3,10 @@ import Joi from "joi";
 
 const ProjectTypesSchema = Joi.object({
   title: Joi.string().required(),
+  subtitle: Joi.string().required(),
   paragraph: Joi.string().required(),
-  iconName: Joi.string().required(),
+  icon: Joi.string().required(),
+  order: Joi.number().required(),
   showOnFront: Joi.boolean().required(),
 });
 
