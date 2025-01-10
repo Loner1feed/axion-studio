@@ -19,8 +19,10 @@ export const ProjectTypesEdit: React.FC = () => {
   const setDataToForm = (data: ProjectType) => {
     form.setFieldsValue({
       title: data.title,
+      subtitle: data.subtitle,
+      order: data.order,
       paragraph: data.paragraph,
-      iconName: data.iconName,
+      icon: data.icon,
       showOnFront: data.showOnFront,
     });
   };

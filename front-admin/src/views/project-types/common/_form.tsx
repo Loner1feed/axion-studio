@@ -37,6 +37,14 @@ export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
       </Form.Item>
 
       <Form.Item<FieldType>
+        label="Subtitle"
+        name="subtitle"
+        rules={[{ required: true, message: "Subtitle is required" }]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item<FieldType>
         label="Paragraph"
         name="paragraph"
         rules={[{ required: true, message: "Paragraph is required" }]}
@@ -45,11 +53,19 @@ export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
       </Form.Item>
 
       <Form.Item<FieldType>
-        label="Icon Name"
-        name="iconName"
+        label="Icon Link"
+        name="icon"
         rules={[{ required: true, message: "Icon name is required" }]}
       >
         <Input />
+      </Form.Item>
+
+      <Form.Item<FieldType>
+        label="Order"
+        name="order"
+        rules={[{ required: true, message: "Order is required" }]}
+      >
+        <Input type="number" min={1} />
       </Form.Item>
 
       <Form.Item<FieldType>

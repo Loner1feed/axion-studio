@@ -49,15 +49,34 @@ export const ProjectTypesList = () => {
     },
 
     {
+      title: "Subtitle",
+      dataIndex: "subtitle",
+      key: "subtitle",
+      width: 250,
+    },
+
+    {
       title: "Paragraph",
       dataIndex: "paragraph",
       key: "paragraph",
     },
 
     {
-      title: "Icon name",
-      dataIndex: "iconName",
-      key: "iconName",
+      title: "Icon",
+      dataIndex: "icon",
+      key: "icon",
+      width: 130,
+      render: (record: string) => (
+        <Button type="dashed" href={record}>
+          Icon link
+        </Button>
+      ),
+    },
+
+    {
+      title: "Order",
+      dataIndex: "order",
+      key: "order",
       width: 130,
     },
 
