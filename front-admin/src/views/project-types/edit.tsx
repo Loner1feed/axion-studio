@@ -23,14 +23,20 @@ export const ProjectTypesEdit: React.FC = () => {
       order: data.order,
       paragraph: data.paragraph,
       icon: data.icon,
+      background: data.background,
       showOnFront: data.showOnFront,
     });
   };
 
   const handleFormFinish: FormProps<FieldType>["onFinish"] = (values) => {
     if (itemId) {
+      const newValues = {
+        ...values,
+        // @ts-ignore
+        background: values.background.toCssString(),
+      };
       setLoading(true);
-      ProjectTypesService.update(itemId, values)
+      ProjectTypesService.update(itemId, newValues)
         .then((res: AxiosResponse) => {
           if (res.status === 200) {
             message.success("Project Type successfully updated!");

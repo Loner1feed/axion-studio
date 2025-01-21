@@ -1,5 +1,5 @@
 import { ProjectType } from "@utils/types";
-import { Button, Form, FormProps, Input, Switch } from "antd";
+import { Button, ColorPicker, Form, FormProps, Input, Switch } from "antd";
 import React, { useState } from "react";
 
 export interface FieldType extends ProjectType {}
@@ -58,6 +58,17 @@ export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
         rules={[{ required: true, message: "Icon name is required" }]}
       >
         <Input />
+      </Form.Item>
+
+      <Form.Item<FieldType>
+        label="Background"
+        name="background"
+        rules={[{ required: true, message: "Background is required" }]}
+        // getValueFromEvent={(color) => {
+        //   return color.toCssString();
+        // }}
+      >
+        <ColorPicker allowClear showText mode={["single", "gradient"]} />
       </Form.Item>
 
       <Form.Item<FieldType>

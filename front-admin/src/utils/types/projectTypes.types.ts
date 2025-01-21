@@ -4,6 +4,7 @@ export interface ProjectType {
   subtitle: string;
   icon: string;
   paragraph: string;
+  background: string;
   order: number;
   showOnFront: boolean;
 }
