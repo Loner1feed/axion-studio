@@ -14,7 +14,11 @@ export const ru = {
     subButton: "Забронируйте звонок с нами и получите персональное предложение",
   },
   projectTypes: {
-    heading: "Типы проектов, которые мы делаем",
+    heading: "Наши основные услуги",
+    actions: {
+      close: "Закрыть",
+      contact: "Связаться с Нами",
+    },
   },
 
   technologies: {

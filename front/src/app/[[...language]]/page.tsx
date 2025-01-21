@@ -7,6 +7,7 @@ import {
   ProjectTypes,
   Process,
   Contact,
+  ProjectTypesNew,
 } from "@/src/components/layout";
 import { ApiService } from "@/src/utils/services";
 
@@ -82,7 +83,8 @@ export default async function Page() {
   return (
     <div>
       <MainBanner />
-      <ProjectTypes data={projectTypes} />
+      {/* <ProjectTypes data={projectTypes} /> */}
+      <ProjectTypesNew data={projectTypes} />
       <Technologies data={technologies} />
       <Process data={processes} />
       <Contact data={socialsMockData} />

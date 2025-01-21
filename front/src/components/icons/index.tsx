@@ -1,3 +1,4 @@
+import { ArrowIcon } from "./arrow";
 import { AxionIcon } from "./axion";
 import { Logo } from "./logo";
 import { NestJSIcon } from "./nestjs";
@@ -21,6 +22,7 @@ const icons = {
   nodejs: <NodeJSIcon />,
   typescript: <TypeScriptIcon />,
   axion: <AxionIcon />,
+  arrow: <ArrowIcon />,
 };
 
 export default icons;
