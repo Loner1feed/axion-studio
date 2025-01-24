@@ -78,14 +78,12 @@ export default async function Page() {
     processesData,
   ]);
 
-  console.log(processes);
-
   return (
     <div>
       <MainBanner />
-      {/* <ProjectTypes data={projectTypes} /> */}
+      <ProjectTypes data={projectTypes} />
       <ProjectTypesNew data={projectTypes} />
-      <Technologies data={technologies} />
+      {/* <Technologies data={technologies} /> */}
       <Process data={processes} />
       <Contact data={socialsMockData} />
     </div>

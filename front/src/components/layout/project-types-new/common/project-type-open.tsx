@@ -70,12 +70,14 @@ export const ProjectTypeOpen: React.FC<ProjectTypeOpenProps> = ({
           </motion.h3>
           <motion.div
             className={styles.paragraph}
-            dangerouslySetInnerHTML={{ __html: data?.paragraph || "" }}
+            // dangerouslySetInnerHTML={{ __html: data?.paragraph || "" }}
             variants={contentVariants}
             initial="hidden"
             animate={"visible"}
             exit="hidden"
-          />
+          >
+            {data?.paragraph}
+          </motion.div>
           <motion.div
             className={styles.buttonRow}
             variants={contentVariants}

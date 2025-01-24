@@ -9,8 +9,6 @@ interface SocialGridProps {
   data?: SocialLinkTypes[];
 }
 
-console.log("API URL: ", process.env.NEXT_PUBLIC_API_URL);
-
 export const SocialGrid: React.FC<SocialGridProps> = ({ data }) => {
   return (
     <div className={styles.socials}>

@@ -64,9 +64,9 @@ export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
         label="Background"
         name="background"
         rules={[{ required: true, message: "Background is required" }]}
-        // getValueFromEvent={(color) => {
-        //   return color.toCssString();
-        // }}
+        getValueFromEvent={(color) => {
+          return color.toCssString();
+        }}
       >
         <ColorPicker allowClear showText mode={["single", "gradient"]} />
       </Form.Item>

@@ -33,7 +33,6 @@ export const ProjectTypesEdit: React.FC = () => {
       const newValues = {
         ...values,
         // @ts-ignore
-        background: values.background.toCssString(),
       };
       setLoading(true);
       ProjectTypesService.update(itemId, newValues)

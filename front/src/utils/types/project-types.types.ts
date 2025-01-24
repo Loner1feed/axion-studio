@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ProjectType {
   id?: string;
   title: string;
@@ -10,7 +12,7 @@ export interface ProjectTypeTypes {
   _id?: string;
   title: string;
   subtitle: string;
-  paragraph: string;
+  paragraph: ReactNode;
   icon: string;
   background: string;
   order: number;
