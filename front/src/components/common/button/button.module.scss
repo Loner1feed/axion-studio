@@ -1,0 +1,44 @@
+@import "../../../assets/styles/vars.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 15px 35px;
+  background: $accent-blue;
+  border: none;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background: $accent-blue-hover;
+  }
+  span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  svg {
+    width: 20px;
+    margin-right: 10px;
+    path {
+      fill: #fff;
+    }
+  }
+
+  @media (max-width: 720px) {
+    padding: 12px 25px;
+    span {
+      font-size: 16px;
+    }
+    svg {
+      width: 18px;
+    }
+  }
+}
+
+.disabled {
+  filter: grayscale(1);
+  pointer-events: none;
+}

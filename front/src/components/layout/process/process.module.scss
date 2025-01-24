@@ -1,0 +1,280 @@
+@import "../../../assets/styles/vars.scss";
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.process {
+  padding: 40px 0;
+}
+
+// PROCESS HEADING START
+.processHeading {
+  cursor: pointer;
+  max-width: 490px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  transition: 0.5s;
+  h3 {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    margin-right: auto;
+    margin-left: 20px;
+  }
+
+  &:hover {
+    .number {
+      color: $accent-blue;
+    }
+    .arrow {
+      svg {
+        fill: $accent-blue;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2px;
+  }
+}
+
+.headingContent {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: rgba(41, 41, 41, 0.5);
+  backdrop-filter: blur(40px);
+  padding-right: 20px;
+  border: 1px solid rgba(52, 52, 52, 0.5);
+}
+
+.active {
+  transform: translateX(-10px);
+  .headingBackdrop {
+    opacity: 1;
+  }
+
+  .number {
+    color: $accent-blue;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+    svg {
+      fill: $accent-blue;
+    }
+  }
+}
+
+.headingBackdrop {
+  position: absolute;
+  bottom: 0;
+  left: 90px;
+  right: 75px;
+  height: 46px;
+  border-radius: 50%;
+  background: $accent-blue;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+  transition: 0.3s;
+  margin-left: 20px;
+  svg {
+    transition: 0.5s;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    fill: #fff;
+  }
+}
+
+.number {
+  font-size: 48px;
+  min-width: 90px;
+  min-height: 90px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(52, 52, 52, 0.5);
+  transition: 0.5s;
+}
+// PROCESS HEADING END
+
+// MAIN LAYOUT START
+.main {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.headingGrp {
+  width: 100%;
+  max-width: 490px;
+  position: relative;
+  margin: 50px;
+}
+
+.backdrop {
+  position: absolute;
+  top: -50px;
+  left: -30px;
+  bottom: -50px;
+  right: -30px;
+  svg {
+    width: 100px;
+  }
+}
+
+.backdropItem {
+  position: absolute;
+  color: #fff;
+  &:first-child {
+    left: 0;
+    bottom: 0;
+  }
+  &:last-child {
+    right: 0;
+    top: 0;
+  }
+}
+
+.content {
+  color: #fff;
+  max-width: 450px;
+  margin-left: 50px;
+  padding-top: 50px;
+
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    max-height: 450px;
+    margin: 0;
+  }
+}
+// MAIN LAYOUT END
+
+@media screen and (max-width: 1050px) {
+  .processHeading {
+    h3 {
+      font-size: 24px;
+    }
+  }
+
+  .number {
+    font-size: 30px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+  }
+
+  // MAIN LAYOUT START
+  .headingGrp {
+    max-width: 340px;
+    margin: 30px;
+  }
+
+  .backdrop {
+    top: -30px;
+    left: -15px;
+    bottom: -30px;
+    right: -15px;
+    svg {
+      width: 70px;
+    }
+  }
+
+  .content {
+    max-width: 350px;
+    margin-left: 15px;
+    padding-top: 30px;
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      max-height: 350px;
+    }
+  }
+}
+
+.paragraph {
+  line-height: 1.3em;
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30px 0 10px;
+  }
+  h4 {
+    display: inline;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  ol {
+    padding: revert;
+    list-style-type: decimal;
+    margin-bottom: 20px;
+
+    li {
+      padding: revert;
+      &::marker {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    max-width: 450px;
+  }
+
+  .headingGrp {
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    margin-bottom: 0;
+  }
+
+  .processHeading {
+    h3 {
+      font-size: 22px;
+    }
+  }
+
+  .backdrop {
+    display: none;
+  }
+}
