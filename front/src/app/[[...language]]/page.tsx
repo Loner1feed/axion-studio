@@ -3,7 +3,6 @@ import React from "react";
 import "../globals.scss";
 import {
   MainBanner,
-  Technologies,
   ProjectTypes,
   Process,
   Contact,
@@ -72,7 +71,7 @@ export default async function Page() {
   const technologiesData = getTechnologies();
   const processesData = getProcesses();
 
-  const [projectTypes, technologies, processes] = await Promise.all([
+  const [projectTypes, processes] = await Promise.all([
     projectTypesData,
     technologiesData,
     processesData,
