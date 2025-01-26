@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest --watchAll  --detectOpenHandles",
-    "build": "./node_modules/.bin/tsc",
+    "build": "tsc-alias",
     "dev": "tsc && tsc-alias && node dist/app.js",
     "start": "cd dist && node app.js"
   },
