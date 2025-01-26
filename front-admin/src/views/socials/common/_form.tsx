@@ -14,7 +14,6 @@ export interface FieldType extends SocialTypes {}
 export const SocialsForm: React.FC<SocialsFormProps> = ({
   onFinish,
   form,
-  isEdit,
   loading,
 }) => {
   const [touched, setTouched] = useState(false);

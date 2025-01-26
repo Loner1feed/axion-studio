@@ -40,7 +40,6 @@ export const FeedbackForm: React.FC<FeedbackFormProps> = ({
   form,
   onFinish,
   loading,
-  isEdit,
 }) => {
   const [touched, setTouched] = useState(false);
 

@@ -1,8 +1,8 @@
 import {
   CodeOutlined,
-  CommentOutlined,
-  FileImageOutlined,
-  PhoneOutlined,
+  // CommentOutlined,
+  // FileImageOutlined,
+  // PhoneOutlined,
   ProductOutlined,
 } from "@ant-design/icons";
 import { APP_PREFIX_PATH } from "./app.config";

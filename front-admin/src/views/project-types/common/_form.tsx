@@ -15,7 +15,6 @@ export const ProjectTypesForm: React.FC<ProjectTypesFormProps> = ({
   form,
   onFinish,
   loading,
-  isEdit,
 }) => {
   const [touched, setTouched] = useState(false);
 

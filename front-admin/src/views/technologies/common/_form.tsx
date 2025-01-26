@@ -15,7 +15,6 @@ export const TechnologiesForm: React.FC<TechnologiesFormProps> = ({
   form,
   onFinish,
   loading,
-  isEdit,
 }) => {
   const [touched, setTouched] = useState(false);
 

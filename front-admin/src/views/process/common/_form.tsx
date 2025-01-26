@@ -15,7 +15,6 @@ export const ProcessForm: React.FC<ProcessFormProps> = ({
   form,
   onFinish,
   loading,
-  isEdit,
 }) => {
   const [touched, setTouched] = useState(false);
 

@@ -15,7 +15,6 @@ export const AdvantagesForm: React.FC<AdvantagesFormProps> = ({
   form,
   onFinish,
   loading,
-  isEdit,
 }) => {
   const [touched, setTouched] = useState(false);
 
