@@ -60,6 +60,6 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
             cd /var/www/axion-studio/server &&
             npm install &&
-            npm run build &&
+            tsc && npm run build &&
             pm2 restart server
           "

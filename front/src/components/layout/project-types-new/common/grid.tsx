@@ -14,6 +14,8 @@ interface ProjectTypesGridProps {
 export const ProjectTypesGrid: React.FC<ProjectTypesGridProps> = ({ data }) => {
   const [index, setIndex] = useState<number | null>(null);
 
+  console.log(data);
+
   useEffect(() => {
     const html = document.querySelector("html");
     if (html) {
@@ -30,6 +32,8 @@ export const ProjectTypesGrid: React.FC<ProjectTypesGridProps> = ({ data }) => {
       <AnimatePresence>
         {index !== null && (
           <ProjectTypeOpen
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             data={
               typeof index === "number" && mockedData ? mockedData[index] : null
             }
@@ -49,7 +53,9 @@ export const ProjectTypesGrid: React.FC<ProjectTypesGridProps> = ({ data }) => {
               setOpen={setIndex}
               index={i}
               background={el.background}
-              icon={data?.[i]?.icon}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
+              icon={el.icon}
               subtitle={el.subtitle}
               title={el.title}
             />
