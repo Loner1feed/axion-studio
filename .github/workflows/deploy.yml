@@ -48,6 +48,7 @@ jobs:
       - name: Deploy front-admin
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.DO_SERVER_USER }}@${{ secrets.DO_SERVER_IP }} "
+            pm2 stop front-admin &&
             cd /var/www/axion-studio/front-admin &&
             npm install &&
             npm run build &&
