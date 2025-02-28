@@ -5,3 +5,4 @@ export * from "./process.controllers";
 export * from "./socials.controllers";
 export * from "./advantages.controllers";
 export * from "./feedback.controllers";
+export * from "./faq.controllers";
