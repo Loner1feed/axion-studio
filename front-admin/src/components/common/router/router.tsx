@@ -9,6 +9,7 @@ import authRoute from "@views/auth/index";
 import { processRoute } from "@views/process";
 import { advantagesRoute } from "@views/advantages";
 import { feedbackRoute } from "@views/feedback";
+import { faqRoute } from "@views/faq";
 
 export const Router: React.FC = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,7 @@ export const Router: React.FC = () => {
             processRoute,
             advantagesRoute,
             feedbackRoute,
+            faqRoute,
           ],
         },
 

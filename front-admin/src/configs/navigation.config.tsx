@@ -4,6 +4,7 @@ import {
   // FileImageOutlined,
   // PhoneOutlined,
   ProductOutlined,
+  QuestionCircleOutlined,
 } from "@ant-design/icons";
 import { APP_PREFIX_PATH } from "./app.config";
 import React from "react";
@@ -71,6 +72,17 @@ const contentNavTree = [
         // call function to generate react-router link
         get label() {
           return generateLabel(this.path, "Our advantages");
+        },
+        breadcrumb: false,
+      },
+
+      {
+        key: `${APP_PREFIX_PATH}/faq`,
+        path: `${APP_PREFIX_PATH}/faq`,
+        icon: <QuestionCircleOutlined />,
+        // call function to generate react-router link
+        get label() {
+          return generateLabel(this.path, "FAQ");
         },
         breadcrumb: false,
       },
