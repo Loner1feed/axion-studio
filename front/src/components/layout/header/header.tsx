@@ -2,7 +2,7 @@ import React from "react";
 
 import { Logo, Phone } from "@/src/components/icons";
 import styles from "./header.module.scss";
-import { LangSwitcher } from "@/src/components/common/lang-switcher/lang-switcher";
+// import { LangSwitcher } from "@/src/components/common/lang-switcher/lang-switcher";
 import { Button } from "@/src/components/common/button/button";
 import { useTranslations } from "@/src/utils/hooks";
 import { Container } from "../container/contaner";
@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({ showBtn = false }) => {
               showBtn ? `${styles.button} ${styles.showBtn}` : styles.button
             }
           />
-          <LangSwitcher />
+          {/* <LangSwitcher /> */}
         </div>
       </Container>
     </header>
