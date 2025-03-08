@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 
 import "../globals.scss";
@@ -71,7 +72,7 @@ export default async function Page() {
   const technologiesData = getTechnologies();
   const processesData = getProcesses();
 
-  const [projectTypes, processes] = await Promise.all([
+  const [projectTypes, _, processes] = await Promise.all([
     projectTypesData,
     technologiesData,
     processesData,

@@ -6,3 +6,4 @@ export * from "./process.validation";
 export * from "./socials.validation";
 export * from "./advantages.validation";
 export * from "./feedback.validation";
+export * from "./faq.validation";

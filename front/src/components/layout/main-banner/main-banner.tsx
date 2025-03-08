@@ -6,7 +6,7 @@ import { useTranslations, useVisibility } from "@/src/utils/hooks";
 import { Button, Heading } from "@/src/components/common";
 import { Phone } from "@/src/components/icons";
 import { MainBannerGradient } from "./common/gradient";
-import { TypeWriter } from "./common/typewriter";
+// import { TypeWriter } from "./common/typewriter";
 import { Container } from "../container/contaner";
 import { Header } from "../header/header";
 
@@ -37,10 +37,9 @@ export const MainBanner: React.FC = () => {
           transition={{ duration: 1 }}
         >
           <Heading tag="h1" className={styles.heading}>
-            {t.mainBanner.heading.main}
-            <br />
-            {t.mainBanner.heading.nextLine}
-            <TypeWriter />
+            We create powerful <span className={styles.highlight}>MVP</span>
+            &apos;s <br />
+            within guaranteed deadlines
           </Heading>
         </motion.div>
 
@@ -49,7 +48,16 @@ export const MainBanner: React.FC = () => {
           animate={{ opacity: 1, transform: "translateY(0)" }}
           transition={{ duration: 0.75, delay: 0 }}
         >
-          <span className={styles.subHeading}>{t.mainBanner.subHeading}</span>
+          <span className={styles.subHeading}>
+            A structured development process, clear milestones <br /> and
+            on-time delivery{" "}
+            <span className={styles.highlight}>for your bright ideas 💡</span>.
+            {/* <ul>
+              <li>Structured development process</li>
+              <li>Clear milestones</li>
+              <li>On-time delivery</li>
+            </ul> */}
+          </span>
         </motion.div>
 
         <motion.div

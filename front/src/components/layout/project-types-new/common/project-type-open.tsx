@@ -55,13 +55,20 @@ export const ProjectTypeOpen: React.FC<ProjectTypeOpenProps> = ({
       <div className={styles.openContainer} onClick={closeHandler}>
         <motion.div
           className={`${styles.projectTypeOpen} ${styles.projectType}`}
-          style={{
-            background:
-              data?.background ||
-              "linear-gradient(90deg, rgba(139,95,191,1) 0%, rgba(28,26,66,1) 100%)",
-          }}
+          // style={{
+          //   background:
+          //     data?.background ||
+          //     "linear-gradient(90deg, rgba(139,95,191,1) 0%, rgba(28,26,66,1) 100%)",
+          // }}
           layoutId={`project-type-${index}`}
         >
+          {/* GRADIENT BORDER */}
+          <motion.div
+            className={styles.gradientBorder}
+            style={{ background: `${data.background} border-box` }}
+          />
+          {/* GRADIENT BORDER END */}
+
           <motion.h3
             layoutId={`project-type-heading-${index}`}
             className={styles.heading}
@@ -86,16 +93,16 @@ export const ProjectTypeOpen: React.FC<ProjectTypeOpenProps> = ({
             animate={"visible"}
           >
             <Button
+              className={styles.button}
+              label={t.projectTypes.actions.contact}
+              onClick={() => setOpen(null)}
+            />
+            <Button
               onClick={() => setOpen(null)}
               label={t.projectTypes.actions.close}
               className={styles.button}
+              variant="secondary"
             />
-            <Button
-              className={styles.button}
-              label={t.projectTypes.actions.contact}
-            />
-            {/* <button >close</button>
-            <button>contact us</button> */}
           </motion.div>
         </motion.div>
       </div>

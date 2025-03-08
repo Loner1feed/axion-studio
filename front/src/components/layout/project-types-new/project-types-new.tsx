@@ -6,6 +6,7 @@ import styles from "./project-types-new.module.scss";
 import { Container } from "../container/contaner";
 import { FadeInOnView, Heading } from "../../common";
 import { useTranslations } from "@/src/utils/hooks";
+import { ActionBanner } from "../action-banner/action-banner";
 
 export interface ProjectTypeTypes {
   _id?: string;
@@ -93,6 +94,13 @@ export const ProjectTypesNew: React.FC<ProjectTypesNewProps> = ({ data }) => {
           <Heading className={styles.title}>{t.projectTypes.heading}</Heading>
         </FadeInOnView>
         <ProjectTypesGrid data={data} />
+        <FadeInOnView>
+          <ActionBanner className={styles.banner}>
+            Didn’t find a service that suits your needs? <br />
+            <span className={styles.highlight}>Contact us</span> to get a
+            personal offer! adaasdsaasdasdasdadsdadad s da dad das dassdasdda
+          </ActionBanner>
+        </FadeInOnView>
       </Container>
     </div>
   );

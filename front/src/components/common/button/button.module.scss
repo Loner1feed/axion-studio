@@ -42,3 +42,12 @@
   filter: grayscale(1);
   pointer-events: none;
 }
+
+.secondary {
+  background: $accent-blue-transparent;
+  border: 3px solid $accent-blue;
+  padding: 12px 32px;
+  &:hover {
+    background: $accent-blue;
+  }
+}

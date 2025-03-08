@@ -1,4 +1,10 @@
 // colors
-$accent-blue: #277bb9;
-$accent-blue-hover: #0261a7;
+$accent-blue: #0385e6;
+$accent-blue-hover: #01518f;
+$accent-blue-transparent: #0385e610;
+$light-blue: #a0d3ff;
 $dark: #050505;
+$blue-gradient: linear-gradient(90deg, $light-blue 0%, $accent-blue 100%);
+$blue-gradient-border: linear-gradient(90deg, $light-blue, $accent-blue);
+
+$light-blue-shadow: 0px 0px 15px 0px rgba(160, 211, 255, 0.4);

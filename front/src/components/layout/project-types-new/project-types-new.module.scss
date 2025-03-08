@@ -24,17 +24,32 @@
   padding: 35px 30px;
   padding-top: 85px;
   border-radius: 20px;
-  color: #fff;
+  color: $light-blue;
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 860px;
+  max-width: 600px;
   height: 100%;
-  transition: 0.5s border-color;
-  border: 1px solid rgba(0, 0, 0, 1);
+  transition: background 0.5s, color 0.5s;
+  // border: 1px solid transparent;
+  // border-image: $blue-gradient;
+  background: $accent-blue-transparent;
   cursor: pointer;
   &:hover {
-    border-color: $accent-blue;
+    border-color: transparent;
+    background: transparent;
+    color: #fff;
+    .itemBackdrop {
+      opacity: 1;
+    }
+
+    .gradientBorder {
+      opacity: 0;
+    }
+
+    .bottomRow svg path {
+      fill: #fff;
+    }
   }
 }
 
@@ -43,9 +58,46 @@
   height: min-content;
   z-index: 5;
   cursor: default;
+  color: $light-blue;
+  background: $accent-blue-transparent;
+  box-shadow: $light-blue-shadow;
   &:hover {
-    border-color: #000;
+    background: $accent-blue-transparent;
+    color: $light-blue;
+
+    .gradientBorder {
+      opacity: 1;
+    }
   }
+}
+
+.itemBackdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.gradientBorder {
+  transition: 0.5s opacity;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: $blue-gradient border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
 .openContainer {
@@ -76,15 +128,18 @@
   left: 0;
   right: 0;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .heading {
   margin: 0;
-  font-size: 48px;
+  font-size: 32px;
+  font-weight: bold;
   position: absolute;
   top: 35px;
   left: 30px;
+  right: 30px;
+  height: 2lh;
 }
 
 .icon {
@@ -108,23 +163,33 @@
     display: block;
     max-width: 240px;
     margin-right: 15px;
+    max-height: 2lh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   svg {
     width: 40px;
+    min-width: 40px;
     height: 40px;
-    transition: 0.5s;
+    path {
+      fill: $light-blue;
+      transition: 0.5s;
+    }
   }
 }
 
 .paragraph {
-  font-size: 20px;
-  font-weight: 500;
-  padding-top: 30px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  // padding-top: 30px;
   width: 100%;
   min-height: 300px;
-  font-size: 24px;
-  font-weight: 500;
-  margin: 30px 0 50px;
+  margin: 20px 0;
 
   ul,
   ol {
@@ -142,10 +207,19 @@
 .buttonRow {
   display: flex;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 10px;
   .button:not(:last-child) {
     margin-right: 15px;
   }
+}
+
+.banner {
+  margin-top: 50px;
+}
+
+.highlight {
+  color: $accent-blue;
+  text-decoration: underline;
 }
 
 // .closedContent {
@@ -159,10 +233,6 @@
 @media screen and (max-width: 1100px) {
   .grid {
     grid-template-rows: repeat(1, 400px);
-  }
-
-  .heading {
-    font-size: 38px;
   }
 
   .icon {
@@ -190,6 +260,10 @@
   .projectType {
     max-width: 600px;
   }
+
+  .icon {
+    min-height: 200px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -209,7 +283,7 @@
 
 @media screen and (max-width: 480px) {
   .projectType {
-    padding: 20px 10px;
+    padding: 20px;
     padding-top: 75px;
     border-radius: 10px;
   }
@@ -224,6 +298,8 @@
   .heading {
     top: 20px;
     left: 20px;
+    right: 20px;
+    font-size: 24px;
   }
 
   .openContainer {
@@ -237,5 +313,14 @@
     ol {
       padding-left: 15px;
     }
+  }
+
+  .gradientBorder,
+  .itemBackdrop {
+    border-radius: 10px;
+  }
+
+  .banner {
+    margin-top: 20px;
   }
 }
