@@ -6,3 +6,4 @@ export * from "./technologies/technologies";
 export * from "./process/process";
 export * from "./contact/contact";
 export * from "./project-types-new/project-types-new";
+export * from "./action-banner/action-banner";
