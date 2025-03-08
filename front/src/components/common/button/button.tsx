@@ -10,6 +10,7 @@ interface ButtonProps {
   href?: string;
   disabled?: boolean;
   type?: "button" | "submit" | "reset" | undefined;
+  variant?: "primary" | "secondary";
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -20,6 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   disabled,
   type,
+  variant = "primary",
 }) => {
   const defineContent = () => (
     <>
@@ -27,39 +29,24 @@ export const Button: React.FC<ButtonProps> = ({
     </>
   );
 
-  // const defineClassname = () => {
-  //   if (disabled) {
-  //     return `${styles.button} ${className} ${styles.disabled}`;
-  //   } else {
-  //     return `${styles.button} ${className}`;
-  //   }
-  // };
+  const defineClassname = () => {
+    const classList = [styles.button, className];
+
+    if (disabled) classList.push(styles.disabled);
+    if (variant === "secondary") classList.push(styles.secondary);
+
+    return classList.join(" ");
+  };
 
   if (href) {
     return (
-      <a
-        href={href}
-        onClick={onClick}
-        className={
-          disabled
-            ? `${styles.button} ${className} ${styles.disabled}`
-            : `${styles.button} ${className}`
-        }
-      >
+      <a href={href} onClick={onClick} className={defineClassname()}>
         {defineContent()}
       </a>
     );
   } else
     return (
-      <button
-        type={type}
-        onClick={onClick}
-        className={
-          disabled
-            ? `${styles.button} ${className} ${styles.disabled}`
-            : `${styles.button} ${className}`
-        }
-      >
+      <button type={type} onClick={onClick} className={defineClassname()}>
         {defineContent()}
       </button>
     );
