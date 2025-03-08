@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ProjectTypeTypes } from "@/src/utils/types";
 import { contentVariants } from "../project-types-new";
 import icons from "@/src/components/icons";
@@ -29,14 +29,20 @@ export const ProjectType: React.FC<ProjectTypeProps> = ({
     <FadeInOnView>
       <motion.div
         className={styles.projectType}
-        style={{
-          background:
-            background ||
-            "linear-gradient(90deg, rgba(139,95,191,1) 0%, rgba(28,26,66,1) 100%)",
-        }}
         layoutId={`project-type-${index}`}
         onClick={() => !open && setOpen(index)}
       >
+        {/* BACKDROP */}
+        <motion.div
+          className={styles.itemBackdrop}
+          style={{ background: background }}
+        ></motion.div>
+        {/* BACKDROP END */}
+
+        {/* GRADIENT BORDER */}
+        <motion.div className={styles.gradientBorder} />
+        {/* GRADIENT BORDER END */}
+
         <motion.h3
           layoutId={`project-type-heading-${index}`}
           className={styles.heading}
@@ -49,7 +55,7 @@ export const ProjectType: React.FC<ProjectTypeProps> = ({
           initial="visible"
           animate={!open ? "visible" : "hidden"}
         >
-          <Image src={icon} alt={title} width={1} height={1} />
+          <img src={icon} alt={title} />
         </motion.div>
         <motion.div
           className={styles.bottomRow}
