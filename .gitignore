@@ -4,3 +4,4 @@
 /front_admin/node_modules
 .env
 /.vscode
+yarn.lock
