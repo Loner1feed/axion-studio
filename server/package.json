@@ -8,7 +8,7 @@
     "test": "jest --watchAll  --detectOpenHandles",
     "build": "tsc-alias",
     "dev": "tsc && tsc-alias && node dist/app.js",
-    "start": "node ./dist/app.js"
+    "start": "npm run build && node ./dist/app.js"
   },
   "_moduleAliases": {
     "@controllers": "dist/controllers",
