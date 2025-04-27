@@ -14,7 +14,11 @@ interface ProjectTypesGridProps {
 export const ProjectTypesGrid: React.FC<ProjectTypesGridProps> = ({ data }) => {
   const [index, setIndex] = useState<number | null>(null);
 
-  console.log(data);
+  const arrangedData = data
+    ? data.filter((el) => el.showOnFront).sort((a, b) => a.order - b.order)
+    : null;
+
+  console.log(arrangedData);
 
   useEffect(() => {
     const html = document.querySelector("html");
@@ -34,28 +38,29 @@ export const ProjectTypesGrid: React.FC<ProjectTypesGridProps> = ({ data }) => {
           <ProjectTypeOpen
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-expect-error
-            data={typeof index === "number" && data ? data[index] : null}
+            data={
+              typeof index === "number" && arrangedData
+                ? arrangedData[index]
+                : null
+            }
             setOpen={setIndex}
             index={index}
           />
         )}
       </AnimatePresence>
       <div className={styles.grid}>
-        {data
-          ?.filter((el) => el.showOnFront)
-          .sort((a, b) => a.order - b.order)
-          .map((el, i) => (
-            <ProjectType
-              key={`project-type-${i}`}
-              open={typeof index === "number" && index === i}
-              setOpen={setIndex}
-              index={i}
-              background={el.background}
-              icon={el.icon}
-              subtitle={el.subtitle}
-              title={el.title}
-            />
-          ))}
+        {arrangedData?.map((el, i) => (
+          <ProjectType
+            key={`project-type-${i}`}
+            open={typeof index === "number" && index === i}
+            setOpen={setIndex}
+            index={i}
+            background={el.background}
+            icon={el.icon}
+            subtitle={el.subtitle}
+            title={el.title}
+          />
+        ))}
       </div>
     </>
   );
