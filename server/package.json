@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "jest --watchAll  --detectOpenHandles",
-    "build": "tsc-alias",
+    "build": "tsc-alias && npx tree -L 3",
     "dev": "tsc && tsc-alias && node dist/app.js",
     "start": "node dist/app.js",
-    "postbuild": "npx tree -L 3"
+    "postbuild": ""
   },
   "_moduleAliases": {
     "@controllers": "dist/controllers",
