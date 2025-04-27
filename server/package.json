@@ -9,7 +9,7 @@
     "build": "tsc-alias",
     "dev": "tsc && tsc-alias && node dist/app.js",
     "start": "node dist/app.js",
-    "postinstall": "npx tree -L 2"
+    "postinstall": "npx tree -L 3"
   },
   "_moduleAliases": {
     "@controllers": "dist/controllers",
