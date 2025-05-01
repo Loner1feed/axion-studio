@@ -55,6 +55,14 @@ export const SocialsForm: React.FC<SocialsFormProps> = ({
       </Form.Item>
 
       <Form.Item<FieldType>
+        label="HREF"
+        name="href"
+        rules={[{ required: true, message: "HREF is required" }]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item<FieldType>
         label="Show On Front"
         name="showOnFront"
         rules={[{ required: true, message: "Show on front is required" }]}

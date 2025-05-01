@@ -3,5 +3,6 @@ export interface SocialTypes {
   title: string;
   backdropColor: string;
   iconName: string;
+  href: string;
   showOnFront: boolean;
 }

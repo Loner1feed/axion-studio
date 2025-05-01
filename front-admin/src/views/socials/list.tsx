@@ -76,6 +76,12 @@ export const SocialsList = () => {
     },
 
     {
+      title: "HREF",
+      dataIndex: "href",
+      key: "href",
+    },
+
+    {
       title: "Show on front",
       dataIndex: "showOnFront",
       key: "showOnFront",

@@ -20,6 +20,7 @@ export const SocialsEdit = () => {
       backdropColor: data.backdropColor,
       iconName: data.iconName,
       showOnFront: data.showOnFront,
+      href: data.href,
     });
   };
 
