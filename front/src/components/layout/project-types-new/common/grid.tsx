@@ -18,8 +18,6 @@ export const ProjectTypesGrid: React.FC<ProjectTypesGridProps> = ({ data }) => {
     ? data.filter((el) => el.showOnFront).sort((a, b) => a.order - b.order)
     : null;
 
-  console.log(arrangedData);
-
   useEffect(() => {
     const html = document.querySelector("html");
     if (html) {

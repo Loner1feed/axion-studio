@@ -82,9 +82,8 @@ export const ProjectTypeOpen: React.FC<ProjectTypeOpenProps> = ({
             initial="hidden"
             animate={"visible"}
             exit="hidden"
-          >
-            {data?.paragraph}
-          </motion.div>
+            dangerouslySetInnerHTML={{ __html: data?.paragraph }}
+          />
           <motion.div
             className={styles.buttonRow}
             variants={contentVariants}
@@ -95,7 +94,16 @@ export const ProjectTypeOpen: React.FC<ProjectTypeOpenProps> = ({
             <Button
               className={styles.button}
               label={t.projectTypes.actions.contact}
-              onClick={() => setOpen(null)}
+              onClick={() => {
+                setOpen(null);
+                const contactBlock = document.getElementById("contact");
+                if (contactBlock?.parentElement) {
+                  window.scrollTo({
+                    top: contactBlock.parentElement.offsetTop - 50,
+                    behavior: "smooth",
+                  });
+                }
+              }}
             />
             <Button
               onClick={() => setOpen(null)}

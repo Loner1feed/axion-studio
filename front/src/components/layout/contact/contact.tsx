@@ -23,7 +23,7 @@ export const Contact: React.FC<ContactProps> = ({ data }) => {
 
   return (
     <FadeInOnView>
-      <div className={styles.contact}>
+      <div className={styles.contact} id="contact">
         <Container>
           <div className={styles.titleGrp}>
             <Heading className={styles.title}>{t.contact.title}</Heading>

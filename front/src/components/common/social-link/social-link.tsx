@@ -5,7 +5,7 @@ export interface SocialLinkTypes {
   _id?: string;
   iconName?: string;
   backdropColor?: string;
-  label?: string;
+  title?: string;
   href?: string;
   showOnFront?: boolean;
 }
@@ -14,7 +14,7 @@ export const SocialLink: React.FC<SocialLinkTypes> = ({
   backdropColor,
   href,
   iconName,
-  label,
+  title,
 }) => {
   return (
     <a href={href} target="_blank" className={styles.link}>
@@ -25,7 +25,7 @@ export const SocialLink: React.FC<SocialLinkTypes> = ({
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
       <div className={styles.icon}>{icons[iconName || "deafult"]}</div>
-      <span>{label}</span>
+      <span>{title}</span>
     </a>
   );
 };

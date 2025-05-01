@@ -8,6 +8,7 @@ import {
   Process,
   Contact,
   ProjectTypesNew,
+  Technologies,
 } from "@/src/components/layout";
 import { ApiService } from "@/src/utils/services";
 
@@ -29,63 +30,33 @@ async function getProcesses() {
   return res.data;
 }
 
-// async function getSocials() {}
+async function getSocials() {
+  const res = await ApiService.getSocials();
 
-// temporary
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const socialsMockData = [
-  {
-    label: "Social 1",
-    iconName: "react",
-    backdropColor: "#7BD2EB",
-    href: "https://google.com",
-    showOnFront: true,
-  },
-
-  {
-    label: "Social 2",
-    iconName: "react",
-    backdropColor: "#7BD2EB",
-    href: "https://google.com",
-    showOnFront: true,
-  },
-
-  {
-    label: "Social 3",
-    iconName: "react",
-    backdropColor: "#7BD2EB",
-    href: "https://google.com",
-    showOnFront: true,
-  },
-
-  {
-    label: "Social 4",
-    iconName: "react",
-    backdropColor: "#7BD2EB",
-    href: "https://google.com",
-    showOnFront: true,
-  },
-];
+  return res.data;
+}
 
 export default async function Page() {
   const projectTypesData = getProjectTypes();
   const technologiesData = getTechnologies();
   const processesData = getProcesses();
+  const socialsData = getSocials();
 
-  const [projectTypes, _, processes] = await Promise.all([
+  const [projectTypes, technologies, processes, socials] = await Promise.all([
     projectTypesData,
     technologiesData,
     processesData,
+    socialsData,
   ]);
 
   return (
     <div>
       <MainBanner />
-      <ProjectTypes data={projectTypes} />
+      {/* <ProjectTypes data={projectTypes} /> */}
       <ProjectTypesNew data={projectTypes} />
-      {/* <Technologies data={technologies} /> */}
+      <Technologies data={technologies} />
       <Process data={processes} />
-      <Contact data={socialsMockData} />
+      <Contact data={socials} />
     </div>
   );
 }

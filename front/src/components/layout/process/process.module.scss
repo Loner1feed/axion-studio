@@ -6,7 +6,7 @@
 }
 
 .process {
-  padding: 40px 0;
+  padding: 120px 0;
 }
 
 // PROCESS HEADING START
@@ -171,6 +171,13 @@
   }
 }
 // MAIN LAYOUT END
+
+@media screend and (max-width: 1100px) {
+  .process {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
 
 @media screen and (max-width: 1050px) {
   .processHeading {

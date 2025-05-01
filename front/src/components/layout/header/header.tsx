@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Logo, Phone } from "@/src/components/icons";
+import { Logo } from "@/src/components/icons";
 import styles from "./header.module.scss";
 // import { LangSwitcher } from "@/src/components/common/lang-switcher/lang-switcher";
 import { Button } from "@/src/components/common/button/button";
@@ -24,11 +24,19 @@ export const Header: React.FC<HeaderProps> = ({ showBtn = false }) => {
         <Logo />
         <div className={styles.right}>
           <Button
-            label={t.actions.book}
-            icon={<Phone />}
+            label={"Contact Us"}
             className={
               showBtn ? `${styles.button} ${styles.showBtn}` : styles.button
             }
+            onClick={() => {
+              const contactBlock = document.getElementById("contact");
+              if (contactBlock?.parentElement) {
+                window.scrollTo({
+                  top: contactBlock.parentElement.offsetTop - 50,
+                  behavior: "smooth",
+                });
+              }
+            }}
           />
           {/* <LangSwitcher /> */}
         </div>

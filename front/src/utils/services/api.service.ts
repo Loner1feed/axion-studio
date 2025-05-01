@@ -17,4 +17,8 @@ export class ApiService {
   static sendFeedback(data: FeedbackShort) {
     return $api.post("/feedback/create", data);
   }
+
+  static getSocials() {
+    return $api.get("/socials");
+  }
 }

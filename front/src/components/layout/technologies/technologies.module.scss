@@ -10,7 +10,7 @@
 }
 
 .technologies {
-  padding: 60px 0;
+  padding: 120px 0;
 }
 
 .technology {
@@ -19,7 +19,7 @@
   align-items: center;
   width: 100%;
   position: relative;
-  padding: 15px 20px;
+  padding: 25px 20px;
   color: #faf9f6;
   cursor: pointer;
   text-decoration: none;
@@ -34,7 +34,7 @@
     font-size: 18px;
     margin: 0;
     margin-top: 16px;
-    max-width: 390px;
+    max-width: 300px;
   }
 
   &:hover {
@@ -75,6 +75,13 @@
 @media screen and (max-width: 1180px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .technologies {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 

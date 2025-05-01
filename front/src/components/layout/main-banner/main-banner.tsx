@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations, useVisibility } from "@/src/utils/hooks";
 import { Button, Heading } from "@/src/components/common";
-import { Phone } from "@/src/components/icons";
+// import { Phone } from "@/src/components/icons";
 import { MainBannerGradient } from "./common/gradient";
 // import { TypeWriter } from "./common/typewriter";
 import { Container } from "../container/contaner";
@@ -52,11 +52,6 @@ export const MainBanner: React.FC = () => {
             A structured development process, clear milestones <br /> and
             on-time delivery{" "}
             <span className={styles.highlight}>for your bright ideas 💡</span>.
-            {/* <ul>
-              <li>Structured development process</li>
-              <li>Clear milestones</li>
-              <li>On-time delivery</li>
-            </ul> */}
           </span>
         </motion.div>
 
@@ -69,9 +64,17 @@ export const MainBanner: React.FC = () => {
           onMouseLeave={() => setHovered(false)}
         >
           <Button
-            label={t.actions.book}
-            icon={<Phone />}
+            label={"Contact Us"}
             className={styles.button}
+            onClick={() => {
+              const contactBlock = document.getElementById("contact");
+              if (contactBlock?.parentElement) {
+                window.scrollTo({
+                  top: contactBlock.parentElement.offsetTop - 50,
+                  behavior: "smooth",
+                });
+              }
+            }}
           />
         </motion.div>
         <i className={styles.subButton}>{t.mainBanner.subButton}</i>

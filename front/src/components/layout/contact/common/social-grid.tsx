@@ -17,7 +17,7 @@ export const SocialGrid: React.FC<SocialGridProps> = ({ data }) => {
           backdropColor={el.backdropColor}
           href={el.href}
           iconName={el.iconName}
-          label={el.label}
+          title={el.title}
           key={`social-${i}`}
         />
       ))}
