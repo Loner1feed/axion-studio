@@ -4,7 +4,6 @@ import { Logo } from "@/src/components/icons";
 import styles from "./header.module.scss";
 // import { LangSwitcher } from "@/src/components/common/lang-switcher/lang-switcher";
 import { Button } from "@/src/components/common/button/button";
-import { useTranslations } from "@/src/utils/hooks";
 import { Container } from "../container/contaner";
 
 interface HeaderProps {
@@ -12,8 +11,6 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ showBtn = false }) => {
-  const t = useTranslations();
-
   return (
     <header
       className={

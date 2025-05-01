@@ -1,10 +1,5 @@
 export const UpworkIcon: React.FC = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    ariaLabel="Upwork"
-    role="img"
-    viewBox="0 0 512 512"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 512 512">
     <rect width="512" height="512" rx="15%" fill="#6fda44" />
     <path
       fill="#ffffff"
